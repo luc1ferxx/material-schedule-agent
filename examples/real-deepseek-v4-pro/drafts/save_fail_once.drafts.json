@@ -1,0 +1,65 @@
+{
+  "drafts": {
+    "b940d3638c5c9d84": {
+      "draft_id": "D-b940d363",
+      "request_key": "b940d3638c5c9d84",
+      "request_id": "REQ-1103-SAVERETRY",
+      "status": "draft",
+      "version": 1,
+      "created_at": "2026-10-29T12:20:47",
+      "updated_at": "2026-10-29T12:20:47",
+      "plan_hash": "311435c3e7bd6f3c6f8ce93e9bde064418f71d3d5e559f2054572f58f5c369e3",
+      "entries": [
+        {
+          "material_id": "M02",
+          "title": "周末城市 vlog 合集",
+          "decision": "schedule",
+          "review_status": "审核通过，按要求时段排期",
+          "channel": "app_home",
+          "requested_slot": "2026-11-03 10:00",
+          "time_rule": "preferred",
+          "suggested_slot": "2026-11-03 10:00",
+          "slot_changed": false,
+          "risk_reasons": [],
+          "pending_items": [],
+          "risk_facts": {
+            "rule_hits": [],
+            "copyright_verified": null,
+            "missing_fields": [],
+            "request_problems": [],
+            "already_scheduled": [],
+            "blocked": false
+          },
+          "confirmations": [],
+          "confirm_state": "ready_to_confirm"
+        },
+        {
+          "material_id": "M07",
+          "title": "咖啡拉花教程",
+          "decision": "schedule",
+          "review_status": "审核通过，按要求时段排期",
+          "channel": "douyin",
+          "requested_slot": "2026-11-03 15:00",
+          "time_rule": "preferred",
+          "suggested_slot": "2026-11-03 15:00",
+          "slot_changed": false,
+          "risk_reasons": [],
+          "pending_items": [],
+          "risk_facts": {
+            "rule_hits": [
+              "R-CP-02(verify)"
+            ],
+            "copyright_verified": "valid",
+            "missing_fields": [],
+            "request_problems": [],
+            "already_scheduled": [],
+            "blocked": false
+          },
+          "confirmations": [],
+          "confirm_state": "ready_to_confirm"
+        }
+      ],
+      "history": []
+    }
+  }
+}

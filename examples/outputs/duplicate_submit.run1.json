@@ -1,0 +1,201 @@
+{
+  "status": "completed",
+  "status_reason": null,
+  "mode": "offline_mock",
+  "mode_notice": "离线 Mock：决策由固定规则产生，只验证流程，不代表真实模型的决策效果",
+  "request_id": "REQ-1103-DUP",
+  "request_key": "73284da86131e6df",
+  "scope": "items",
+  "as_of": "2026-10-29 09:00",
+  "input_notes": [
+    "请求中 M02 重复出现且要求相同，已合并为一条"
+  ],
+  "published": false,
+  "publish_notice": "本 Agent 只生成排期草稿，没有发布能力；所有条目需用户确认后才生效",
+  "draft": {
+    "saved": true,
+    "result": "created",
+    "draft_id": "D-73284da8",
+    "version": 1,
+    "message": "草稿已创建",
+    "save_attempts": 1
+  },
+  "materials": [
+    {
+      "material_id": "M02",
+      "title": "周末城市 vlog 合集",
+      "decision": "schedule",
+      "review_status": "审核通过，按要求时段排期",
+      "channel": "app_home",
+      "requested_slot": "2026-11-03 10:00",
+      "time_rule": "preferred",
+      "suggested_slot": "2026-11-03 10:00",
+      "slot_changed": false,
+      "risk_reasons": [],
+      "pending_items": [],
+      "risk_facts": {
+        "rule_hits": [],
+        "copyright_verified": null,
+        "missing_fields": [],
+        "request_problems": [],
+        "already_scheduled": [],
+        "blocked": false
+      },
+      "confirmations": [],
+      "confirm_state": "ready_to_confirm",
+      "draft_status": "已写入草稿 D-73284da8",
+      "tool_facts": {
+        "found": true,
+        "missing_fields": [],
+        "already_scheduled": [],
+        "rule_hits": [],
+        "copyright_declared": "valid",
+        "copyright_verified": null,
+        "slot_available": true,
+        "slot_conflict": null,
+        "blocked": false
+      }
+    },
+    {
+      "material_id": "M06",
+      "title": "老用户回馈活动",
+      "decision": "duplicate",
+      "review_status": "重复提交，已在排期中",
+      "channel": "douyin",
+      "requested_slot": "2026-11-03 19:00",
+      "time_rule": "preferred",
+      "suggested_slot": null,
+      "slot_changed": false,
+      "risk_reasons": [
+        "已在排期 S-1103-06（douyin 2026-11-03 19:00），不重复排期"
+      ],
+      "pending_items": [],
+      "risk_facts": {
+        "rule_hits": null,
+        "copyright_verified": null,
+        "missing_fields": [],
+        "request_problems": [],
+        "already_scheduled": [
+          "S-1103-06"
+        ],
+        "blocked": false
+      },
+      "confirmations": [],
+      "confirm_state": "not_schedulable",
+      "draft_status": "已写入草稿 D-73284da8",
+      "tool_facts": {
+        "found": true,
+        "missing_fields": [],
+        "already_scheduled": [
+          "S-1103-06"
+        ],
+        "rule_hits": null,
+        "copyright_declared": "valid",
+        "copyright_verified": null,
+        "slot_available": null,
+        "slot_conflict": null,
+        "blocked": false
+      }
+    }
+  ],
+  "pending_confirmations": [],
+  "guard_flags": [],
+  "model_summary": "【离线 Mock】处理结果：\n- M02：审核通过，按要求时段排期，建议时段 2026-11-03 10:00\n- M06：重复提交，已在排期中，建议时段 无\n草稿保存结果：created（D-73284da8 v1）。仅为草稿，需你确认，未做任何发布。",
+  "usage": {
+    "steps": 6,
+    "tool_calls": 5,
+    "max_steps": 40,
+    "max_tool_calls": 80
+  },
+  "trace": [
+    {
+      "step": 1,
+      "call": 1,
+      "type": "tool_call",
+      "tool": "get_material",
+      "args": {
+        "material_id": "M02"
+      },
+      "basis": "读取 M02 元数据，确认信息是否完整",
+      "ok": true,
+      "result_summary": "《周末城市 vlog 合集》；必填字段齐全；版权声明状态 valid（未核验）",
+      "next_action": "check_rules(M02)"
+    },
+    {
+      "step": 2,
+      "call": 2,
+      "type": "tool_call",
+      "tool": "check_rules",
+      "args": {
+        "material_id": "M02"
+      },
+      "basis": "M02 信息齐全，按审核规则检查",
+      "ok": true,
+      "result_summary": "无规则风险",
+      "next_action": "query_slots(M02)"
+    },
+    {
+      "step": 3,
+      "call": 3,
+      "type": "tool_call",
+      "tool": "query_slots",
+      "args": {
+        "material_id": "M02",
+        "channel": "app_home",
+        "publish_time": "2026-11-03 10:00"
+      },
+      "basis": "M02 审核无阻断风险，查询要求时段 2026-11-03 10:00 是否可用",
+      "ok": true,
+      "result_summary": "app_home 2026-11-03 10:00 可用",
+      "next_action": "get_material(M06)"
+    },
+    {
+      "step": 4,
+      "call": 4,
+      "type": "tool_call",
+      "tool": "get_material",
+      "args": {
+        "material_id": "M06"
+      },
+      "basis": "读取 M06 元数据，确认信息是否完整",
+      "ok": true,
+      "result_summary": "《老用户回馈活动》；必填字段齐全；版权声明状态 valid（未核验）；已在排期 S-1103-06(douyin 2026-11-03 19:00)",
+      "next_action": "save_draft"
+    },
+    {
+      "step": 5,
+      "call": 5,
+      "type": "tool_call",
+      "tool": "save_draft",
+      "args": {
+        "entries": [
+          {
+            "material_id": "M02",
+            "decision": "schedule",
+            "suggested_slot": "2026-11-03 10:00",
+            "risk_reasons": [],
+            "pending_items": []
+          },
+          {
+            "material_id": "M06",
+            "decision": "duplicate",
+            "suggested_slot": "",
+            "risk_reasons": [
+              "已在排期 S-1103-06（douyin 2026-11-03 19:00），不重复排期"
+            ],
+            "pending_items": []
+          }
+        ]
+      },
+      "basis": "全部素材已处理，提交排期草稿",
+      "ok": true,
+      "result_summary": "created：D-73284da8 v1（草稿已创建）",
+      "next_action": "结束，输出总结"
+    }
+  ],
+  "inputs": {
+    "request": "examples/inputs/duplicate_submit.json",
+    "schedule": "data/schedule.json",
+    "drafts": "examples/drafts/duplicate_submit.drafts.json"
+  }
+}

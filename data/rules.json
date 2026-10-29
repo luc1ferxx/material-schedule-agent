@@ -1,0 +1,62 @@
+{
+  "_note": "审核规则（合成）。level: block=阻断, warn=需人工确认, verify=需调用 verify_copyright 补查",
+  "required_fields": {
+    "video": ["title", "owner", "cover_url", "duration_sec", "copyright"],
+    "image": ["title", "owner", "image_url", "copyright"],
+    "default": ["title", "owner", "copyright"]
+  },
+  "rules": [
+    {
+      "rule_id": "R-AD-01",
+      "level": "warn",
+      "type": "keyword",
+      "fields": ["title", "description"],
+      "keywords": ["全网最", "最低价", "最便宜", "第一品牌", "国家级"],
+      "message": "文案含广告法极限词，需修改文案或经法务确认后发布"
+    },
+    {
+      "rule_id": "R-AD-02",
+      "level": "block",
+      "type": "flag",
+      "when": {"is_commercial": true, "ad_label": false},
+      "message": "商业推广内容未标注“广告”，不得发布"
+    },
+    {
+      "rule_id": "R-CP-01",
+      "level": "block",
+      "type": "copyright_status",
+      "statuses": ["expired", "revoked"],
+      "message": "素材版权已失效，不得发布"
+    },
+    {
+      "rule_id": "R-CP-02",
+      "level": "verify",
+      "type": "copyright_status",
+      "statuses": ["pending"],
+      "message": "素材版权状态待核验，需调用 verify_copyright 补查后再决定"
+    },
+    {
+      "rule_id": "R-MINOR-01",
+      "level": "warn",
+      "type": "flag",
+      "when": {"involves_minor": true},
+      "message": "涉及未成年人出镜，需确认监护人授权"
+    },
+    {
+      "rule_id": "R-SAFE-01",
+      "level": "block",
+      "type": "keyword",
+      "fields": ["title", "description"],
+      "keywords": ["赌博", "代开发票", "刷单"],
+      "message": "含违规内容关键词，不得发布"
+    },
+    {
+      "rule_id": "R-DUR-01",
+      "level": "warn",
+      "type": "max_value",
+      "field": "duration_sec",
+      "max": 120,
+      "message": "视频时长超过 120 秒，需剪辑或确认后发布"
+    }
+  ]
+}

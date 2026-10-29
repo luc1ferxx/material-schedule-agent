@@ -1,0 +1,45 @@
+{
+  "_note": "版权登记库（合成），供 verify_copyright 补查。valid_until 早于发布日期视为失效",
+  "licenses": {
+    "LIC-001": {
+      "status": "valid",
+      "valid_until": "2027-12-31",
+      "holder": "本公司自制"
+    },
+    "LIC-002": {
+      "status": "valid",
+      "valid_until": "2027-12-31",
+      "holder": "本公司自制"
+    },
+    "LIC-004": {
+      "status": "valid",
+      "valid_until": "2027-03-31",
+      "holder": "品牌方授权"
+    },
+    "LIC-005": {
+      "status": "expired",
+      "valid_until": "2026-10-31",
+      "holder": "某音乐库（背景音乐）"
+    },
+    "LIC-006": {
+      "status": "valid",
+      "valid_until": "2027-12-31",
+      "holder": "本公司自制"
+    },
+    "LIC-007": {
+      "status": "valid",
+      "valid_until": "2027-06-30",
+      "holder": "某音乐库（背景音乐）"
+    },
+    "LIC-008": {
+      "status": "valid",
+      "valid_until": "2027-12-31",
+      "holder": "本公司自制"
+    },
+    "LIC-009": {
+      "status": "valid",
+      "valid_until": "2027-12-31",
+      "holder": "品牌方授权"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "drafts": {
+    "016e2b63143aeeae": {
+      "draft_id": "D-016e2b63",
+      "request_key": "016e2b63143aeeae",
+      "request_id": "REQ-1103-FIXED",
+      "status": "draft",
+      "version": 1,
+      "created_at": "2026-10-29T12:18:04",
+      "updated_at": "2026-10-29T12:18:04",
+      "plan_hash": "0f491bfdda36f94e66f6f1c08e88b930bf884504d2bf1c8ccf01dc61232fc108",
+      "entries": [
+        {
+          "material_id": "M08",
+          "title": "新品发布会直播预热",
+          "decision": "pending_confirmation",
+          "review_status": "待确认",
+          "channel": "app_home",
+          "requested_slot": "2026-11-03 20:00",
+          "time_rule": "fixed",
+          "suggested_slot": null,
+          "slot_changed": false,
+          "risk_reasons": [
+            "硬性发布时间 2026-11-03 20:00 在 app_home 已被已有排期 S-1103-03《直播间开播提醒》占用，无法按原定时间发布；更近的 21:00 已被已有排期 S-1103-04《品牌故事》占用"
+          ],
+          "pending_items": [
+            "硬性时间 20:00 被占用，已提议改至 2026-11-03 19:00（可选替代时段还有 22:00、17:00），请确认是否同意改期或选择其他处理方式"
+          ],
+          "risk_facts": {
+            "rule_hits": [],
+            "copyright_verified": null,
+            "missing_fields": [],
+            "request_problems": [],
+            "already_scheduled": [],
+            "blocked": false
+          },
+          "confirmations": [
+            {
+              "confirmation_id": "C-M08-41a861",
+              "question": "硬性发布时间 2026-11-03 20:00 在 app_home 已被已有排期 S-1103-03《直播间开播提醒》占用，无法按原定时间发布。工具返回的可选替代时段为 2026-11-03 19:00、22:00、17:00（更近的 21:00 已被已有排期 S-1103-04《品牌故事》占用）。请确认是否同意改到替代时段，或选择其他处理方式。",
+              "proposed_slot": "2026-11-03 19:00",
+              "status": "awaiting_user"
+            }
+          ],
+          "confirm_state": "awaiting_user_decision"
+        }
+      ],
+      "history": []
+    }
+  }
+}

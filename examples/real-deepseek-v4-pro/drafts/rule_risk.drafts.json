@@ -1,0 +1,107 @@
+{
+  "drafts": {
+    "bfc249d57a674e15": {
+      "draft_id": "D-bfc249d5",
+      "request_key": "bfc249d57a674e15",
+      "request_id": "REQ-1103-RISK",
+      "status": "draft",
+      "version": 1,
+      "created_at": "2026-10-29T12:19:14",
+      "updated_at": "2026-10-29T12:19:14",
+      "plan_hash": "6d626962774f0839fbbb336e99f8f7aaba41b127764f1bf33936b7142964ab97",
+      "entries": [
+        {
+          "material_id": "M04",
+          "title": "全网最低价！降噪耳机限时抢",
+          "decision": "pending_confirmation",
+          "review_status": "待确认",
+          "channel": "app_home",
+          "requested_slot": "2026-11-03 14:00",
+          "time_rule": "preferred",
+          "suggested_slot": "2026-11-03 14:00",
+          "slot_changed": false,
+          "risk_reasons": [
+            "命中 warn 级规则 R-AD-01：文案含广告法极限词（命中关键词：全网最、最低价），需修改文案或经法务确认"
+          ],
+          "pending_items": [
+            "是否仍按 2026-11-03 14:00 在 app_home 排期（需修改文案或经法务确认）"
+          ],
+          "risk_facts": {
+            "rule_hits": [
+              "R-AD-01(warn)"
+            ],
+            "copyright_verified": null,
+            "missing_fields": [],
+            "request_problems": [],
+            "already_scheduled": [],
+            "blocked": false
+          },
+          "confirmations": [
+            {
+              "confirmation_id": "C-M04-80e03a",
+              "question": "M04 命中 warn 级规则 R-AD-01：文案含广告法极限词（命中关键词：全网最、最低价），需修改文案或经法务确认后发布。要求时段 2026-11-03 14:00（app_home）可用，是否仍按此时段排期？",
+              "proposed_slot": null,
+              "status": "awaiting_user"
+            }
+          ],
+          "confirm_state": "awaiting_user_decision"
+        },
+        {
+          "material_id": "M05",
+          "title": "毕业季混剪",
+          "decision": "blocked",
+          "review_status": "阻断",
+          "channel": "app_home",
+          "requested_slot": "2026-11-03 16:00",
+          "time_rule": "preferred",
+          "suggested_slot": null,
+          "slot_changed": false,
+          "risk_reasons": [
+            "版权授权已失效：LIC-005 有效期至 2026-10-31，不覆盖发布日 2026-11-03"
+          ],
+          "pending_items": [],
+          "risk_facts": {
+            "rule_hits": [
+              "R-CP-02(verify)"
+            ],
+            "copyright_verified": "expired",
+            "missing_fields": [],
+            "request_problems": [],
+            "already_scheduled": [],
+            "blocked": true
+          },
+          "confirmations": [],
+          "confirm_state": "not_schedulable"
+        },
+        {
+          "material_id": "M09",
+          "title": "直播间专属优惠券",
+          "decision": "blocked",
+          "review_status": "阻断",
+          "channel": "douyin",
+          "requested_slot": "2026-11-03 16:00",
+          "time_rule": "preferred",
+          "suggested_slot": null,
+          "slot_changed": false,
+          "risk_reasons": [
+            "商业推广内容未标注“广告”（R-AD-02 block），不得发布"
+          ],
+          "pending_items": [],
+          "risk_facts": {
+            "rule_hits": [
+              "R-AD-02(block)"
+            ],
+            "copyright_verified": null,
+            "missing_fields": [],
+            "request_problems": [],
+            "already_scheduled": [],
+            "blocked": true
+          },
+          "confirmations": [],
+          "confirm_state": "not_schedulable"
+        }
+      ],
+      "history": []
+    }
+  }
+}

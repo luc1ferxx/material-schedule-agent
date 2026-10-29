@@ -1,0 +1,137 @@
+{
+  "status": "incomplete",
+  "status_reason": "达到工具调用次数上限 3，本轮另有 1 个调用未执行：get_material",
+  "mode": "offline_mock",
+  "mode_notice": "离线 Mock：决策由固定规则产生，只验证流程，不代表真实模型的决策效果",
+  "request_id": "REQ-1103-NORMAL",
+  "request_key": "b940d3638c5c9d84",
+  "scope": "items",
+  "as_of": "2026-10-29 09:00",
+  "input_notes": [],
+  "published": false,
+  "publish_notice": "本 Agent 只生成排期草稿，没有发布能力；所有条目需用户确认后才生效",
+  "draft": {
+    "saved": false,
+    "result": "not_saved",
+    "message": "没有通过复核并写入的草稿",
+    "save_attempts": 0
+  },
+  "materials": [
+    {
+      "material_id": "M02",
+      "decision": null,
+      "review_status": "未完成（没有通过复核的草稿条目）",
+      "channel": "app_home",
+      "requested_slot": "2026-11-03 10:00",
+      "time_rule": "preferred",
+      "suggested_slot": null,
+      "risk_reasons": [],
+      "pending_items": [],
+      "confirmations": [],
+      "confirm_state": "unknown",
+      "draft_status": "草稿未保存",
+      "tool_facts": {
+        "found": true,
+        "missing_fields": [],
+        "already_scheduled": [],
+        "rule_hits": [],
+        "copyright_declared": "valid",
+        "copyright_verified": null,
+        "slot_available": true,
+        "slot_conflict": null,
+        "blocked": false
+      }
+    },
+    {
+      "material_id": "M07",
+      "decision": null,
+      "review_status": "未完成（没有通过复核的草稿条目）",
+      "channel": "douyin",
+      "requested_slot": "2026-11-03 15:00",
+      "time_rule": "preferred",
+      "suggested_slot": null,
+      "risk_reasons": [],
+      "pending_items": [],
+      "confirmations": [],
+      "confirm_state": "unknown",
+      "draft_status": "草稿未保存",
+      "tool_facts": {
+        "found": null,
+        "missing_fields": [],
+        "already_scheduled": [],
+        "rule_hits": null,
+        "copyright_declared": null,
+        "copyright_verified": null,
+        "slot_available": null,
+        "slot_conflict": null,
+        "blocked": false
+      }
+    }
+  ],
+  "pending_confirmations": [],
+  "guard_flags": [],
+  "model_summary": "",
+  "usage": {
+    "steps": 4,
+    "tool_calls": 3,
+    "max_steps": 40,
+    "max_tool_calls": 3
+  },
+  "trace": [
+    {
+      "step": 1,
+      "call": 1,
+      "type": "tool_call",
+      "tool": "get_material",
+      "args": {
+        "material_id": "M02"
+      },
+      "basis": "读取 M02 元数据，确认信息是否完整",
+      "ok": true,
+      "result_summary": "《周末城市 vlog 合集》；必填字段齐全；版权声明状态 valid（未核验）",
+      "next_action": "check_rules(M02)"
+    },
+    {
+      "step": 2,
+      "call": 2,
+      "type": "tool_call",
+      "tool": "check_rules",
+      "args": {
+        "material_id": "M02"
+      },
+      "basis": "M02 信息齐全，按审核规则检查",
+      "ok": true,
+      "result_summary": "无规则风险",
+      "next_action": "query_slots(M02)"
+    },
+    {
+      "step": 3,
+      "call": 3,
+      "type": "tool_call",
+      "tool": "query_slots",
+      "args": {
+        "material_id": "M02",
+        "channel": "app_home",
+        "publish_time": "2026-11-03 10:00"
+      },
+      "basis": "M02 审核无阻断风险，查询要求时段 2026-11-03 10:00 是否可用",
+      "ok": true,
+      "result_summary": "app_home 2026-11-03 10:00 可用",
+      "next_action": "停止：达到工具调用次数上限 3，本轮另有 1 个调用未执行：get_material"
+    },
+    {
+      "step": 4,
+      "type": "refused_call",
+      "tool": "get_material",
+      "args": {
+        "material_id": "M07"
+      },
+      "basis": "读取 M07 元数据，确认信息是否完整"
+    }
+  ],
+  "inputs": {
+    "request": "examples/inputs/normal.json",
+    "schedule": "data/schedule.json",
+    "drafts": "examples/drafts/tool_limit.drafts.json"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "_note": "已有排期（已确认，占用时段）。评审可直接修改本文件更换占用时段后重新运行",
+  "entries": [
+    {"schedule_id": "S-1103-01", "channel": "app_home", "slot": "2026-11-03 12:00", "material_id": "M90", "title": "双十一预热"},
+    {"schedule_id": "S-1103-02", "channel": "app_home", "slot": "2026-11-03 18:00", "material_id": "M91", "title": "晚间档推荐"},
+    {"schedule_id": "S-1103-03", "channel": "app_home", "slot": "2026-11-03 20:00", "material_id": "M92", "title": "直播间开播提醒"},
+    {"schedule_id": "S-1103-04", "channel": "app_home", "slot": "2026-11-03 21:00", "material_id": "M93", "title": "品牌故事"},
+    {"schedule_id": "S-1103-05", "channel": "douyin", "slot": "2026-11-03 20:00", "material_id": "M94", "title": "达人联名预告"},
+    {"schedule_id": "S-1103-06", "channel": "douyin", "slot": "2026-11-03 19:00", "material_id": "M06", "title": "老用户回馈活动"}
+  ]
+}

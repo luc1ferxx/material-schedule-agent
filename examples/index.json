@@ -1,0 +1,100 @@
+{
+  "pending_scope": {
+    "scenario": "pending_scope",
+    "input": "pending_scope.json",
+    "status": "completed",
+    "draft": "created",
+    "tool_calls": 29
+  },
+  "normal": {
+    "scenario": "normal",
+    "input": "normal.json",
+    "status": "completed",
+    "draft": "created",
+    "tool_calls": 8
+  },
+  "slot_conflict": {
+    "scenario": "slot_conflict",
+    "input": "slot_conflict.json",
+    "status": "completed",
+    "draft": "created",
+    "tool_calls": 5
+  },
+  "fixed_conflict": {
+    "scenario": "fixed_conflict",
+    "input": "fixed_conflict.json",
+    "status": "completed",
+    "draft": "created",
+    "tool_calls": 5
+  },
+  "competing_conflict": {
+    "scenario": "competing_conflict",
+    "input": "competing_conflict.json",
+    "status": "completed",
+    "draft": "created",
+    "tool_calls": 9
+  },
+  "missing_info": {
+    "scenario": "missing_info",
+    "input": "missing_info.json",
+    "status": "completed",
+    "draft": "created",
+    "tool_calls": 4
+  },
+  "rule_risk": {
+    "scenario": "rule_risk",
+    "input": "rule_risk.json",
+    "status": "completed",
+    "draft": "created",
+    "tool_calls": 12
+  },
+  "duplicate_submit.run1": {
+    "scenario": "duplicate_submit",
+    "input": "duplicate_submit.json",
+    "status": "completed",
+    "draft": "created",
+    "tool_calls": 5
+  },
+  "duplicate_submit.run2": {
+    "scenario": "duplicate_submit",
+    "input": "duplicate_submit.json",
+    "status": "completed",
+    "draft": "duplicate_unchanged",
+    "tool_calls": 5
+  },
+  "schedule_changed.run1": {
+    "scenario": "schedule_changed",
+    "input": "slot_conflict.json",
+    "status": "completed",
+    "draft": "created",
+    "tool_calls": 5
+  },
+  "schedule_changed.run2": {
+    "scenario": "schedule_changed",
+    "input": "slot_conflict.json",
+    "status": "completed",
+    "draft": "updated",
+    "tool_calls": 5
+  },
+  "save_fail_always": {
+    "scenario": "save_fail_always",
+    "input": "save_fail_always.json",
+    "status": "save_failed",
+    "draft": "save_failed",
+    "tool_calls": 8
+  },
+  "save_fail_once": {
+    "scenario": "save_fail_once",
+    "input": "save_fail_once.json",
+    "status": "completed",
+    "draft": "created",
+    "tool_calls": 9
+  },
+  "tool_limit": {
+    "scenario": "tool_limit",
+    "input": "normal.json",
+    "status": "incomplete",
+    "draft": "not_saved",
+    "tool_calls": 3
+  }
+}

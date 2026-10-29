@@ -1,0 +1,20 @@
+{
+  "request_id": "REQ-1103-MISSING",
+  "as_of": "2026-10-29 09:00",
+  "items": [
+    {
+      "material_id": "M03",
+      "channel": "app_home",
+      "publish_time": "2026-11-03 15:00"
+    },
+    {
+      "material_id": "M99",
+      "channel": "app_home",
+      "publish_time": "2026-11-03 16:00"
+    },
+    {
+      "material_id": "M02",
+      "channel": "douyin"
+    }
+  ]
+}

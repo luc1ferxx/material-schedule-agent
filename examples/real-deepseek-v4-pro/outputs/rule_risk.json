@@ -1,0 +1,371 @@
+{
+  "status": "completed",
+  "status_reason": null,
+  "mode": "openai-compatible:deepseek-v4-pro",
+  "mode_notice": null,
+  "request_id": "REQ-1103-RISK",
+  "request_key": "bfc249d57a674e15",
+  "scope": "items",
+  "as_of": "2026-10-29 09:00",
+  "input_notes": [],
+  "published": false,
+  "publish_notice": "本 Agent 只生成排期草稿，没有发布能力；所有条目需用户确认后才生效",
+  "draft": {
+    "saved": true,
+    "result": "created",
+    "draft_id": "D-bfc249d5",
+    "version": 1,
+    "message": "草稿已创建",
+    "save_attempts": 1
+  },
+  "materials": [
+    {
+      "material_id": "M04",
+      "title": "全网最低价！降噪耳机限时抢",
+      "decision": "pending_confirmation",
+      "review_status": "待确认",
+      "channel": "app_home",
+      "requested_slot": "2026-11-03 14:00",
+      "time_rule": "preferred",
+      "suggested_slot": "2026-11-03 14:00",
+      "slot_changed": false,
+      "risk_reasons": [
+        "命中 warn 级规则 R-AD-01：文案含广告法极限词（命中关键词：全网最、最低价），需修改文案或经法务确认"
+      ],
+      "pending_items": [
+        "是否仍按 2026-11-03 14:00 在 app_home 排期（需修改文案或经法务确认）"
+      ],
+      "risk_facts": {
+        "rule_hits": [
+          "R-AD-01(warn)"
+        ],
+        "copyright_verified": null,
+        "missing_fields": [],
+        "request_problems": [],
+        "already_scheduled": [],
+        "blocked": false
+      },
+      "confirmations": [
+        {
+          "confirmation_id": "C-M04-80e03a",
+          "question": "M04 命中 warn 级规则 R-AD-01：文案含广告法极限词（命中关键词：全网最、最低价），需修改文案或经法务确认后发布。要求时段 2026-11-03 14:00（app_home）可用，是否仍按此时段排期？",
+          "proposed_slot": null,
+          "status": "awaiting_user"
+        }
+      ],
+      "confirm_state": "awaiting_user_decision",
+      "draft_status": "已写入草稿 D-bfc249d5",
+      "tool_facts": {
+        "found": true,
+        "missing_fields": [],
+        "already_scheduled": [],
+        "rule_hits": [
+          "R-AD-01(warn)"
+        ],
+        "copyright_declared": "valid",
+        "copyright_verified": null,
+        "slot_available": true,
+        "slot_conflict": null,
+        "blocked": false
+      }
+    },
+    {
+      "material_id": "M05",
+      "title": "毕业季混剪",
+      "decision": "blocked",
+      "review_status": "阻断",
+      "channel": "app_home",
+      "requested_slot": "2026-11-03 16:00",
+      "time_rule": "preferred",
+      "suggested_slot": null,
+      "slot_changed": false,
+      "risk_reasons": [
+        "版权授权已失效：LIC-005 有效期至 2026-10-31，不覆盖发布日 2026-11-03"
+      ],
+      "pending_items": [],
+      "risk_facts": {
+        "rule_hits": [
+          "R-CP-02(verify)"
+        ],
+        "copyright_verified": "expired",
+        "missing_fields": [],
+        "request_problems": [],
+        "already_scheduled": [],
+        "blocked": true
+      },
+      "confirmations": [],
+      "confirm_state": "not_schedulable",
+      "draft_status": "已写入草稿 D-bfc249d5",
+      "tool_facts": {
+        "found": true,
+        "missing_fields": [],
+        "already_scheduled": [],
+        "rule_hits": [
+          "R-CP-02(verify)"
+        ],
+        "copyright_declared": "pending",
+        "copyright_verified": "expired",
+        "slot_available": null,
+        "slot_conflict": null,
+        "blocked": true
+      }
+    },
+    {
+      "material_id": "M09",
+      "title": "直播间专属优惠券",
+      "decision": "blocked",
+      "review_status": "阻断",
+      "channel": "douyin",
+      "requested_slot": "2026-11-03 16:00",
+      "time_rule": "preferred",
+      "suggested_slot": null,
+      "slot_changed": false,
+      "risk_reasons": [
+        "商业推广内容未标注“广告”（R-AD-02 block），不得发布"
+      ],
+      "pending_items": [],
+      "risk_facts": {
+        "rule_hits": [
+          "R-AD-02(block)"
+        ],
+        "copyright_verified": null,
+        "missing_fields": [],
+        "request_problems": [],
+        "already_scheduled": [],
+        "blocked": true
+      },
+      "confirmations": [],
+      "confirm_state": "not_schedulable",
+      "draft_status": "已写入草稿 D-bfc249d5",
+      "tool_facts": {
+        "found": true,
+        "missing_fields": [],
+        "already_scheduled": [],
+        "rule_hits": [
+          "R-AD-02(block)"
+        ],
+        "copyright_declared": "valid",
+        "copyright_verified": null,
+        "slot_available": null,
+        "slot_conflict": null,
+        "blocked": true
+      }
+    }
+  ],
+  "pending_confirmations": [
+    {
+      "material_id": "M04",
+      "confirmation_id": "C-M04-80e03a",
+      "question": "M04 命中 warn 级规则 R-AD-01：文案含广告法极限词（命中关键词：全网最、最低价），需修改文案或经法务确认后发布。要求时段 2026-11-03 14:00（app_home）可用，是否仍按此时段排期？",
+      "proposed_slot": null,
+      "status": "awaiting_user"
+    }
+  ],
+  "guard_flags": [],
+  "model_summary": "处理完成，草稿已保存。以下是本次排期审核结果：\n\n## 审核结果汇总\n\n| 素材 | 结论 | 建议时段 | 说明 |\n|------|------|----------|------|\n| M04 | 待确认（pending_confirmation） | 2026-11-03 14:00（app_home） | 命中 warn 级规则，需用户确认 |\n| M05 | 已阻断（blocked） | 不排期 | 版权授权失效 |\n| M09 | 已阻断（blocked） | 不排期 | 命中 block 级规则 |\n\n## 详细说明\n\n**M04（降噪耳机促销短片）**\n- 要求时段 2026-11-03 14:00（app_home）经查询可用。\n- 命中 warn 级规则 R-AD-01：文案含广告法极限词（命中关键词：全网最、最低价），需修改文案或经法务确认后发布。\n- 已登记确认事项，待你决定：**是否仍按 2026-11-03 14:00 在 app_home 排期（需修改文案或经法务确认）**。\n\n**M05（毕业季混剪）**\n- 规则检查命中 verify，版权补查结果为 expired：授权（LIC-005）有效期至 2026-10-31，不覆盖发布日 2026-11-03。\n- 已阻断，本次不排期。\n\n**M09（直播间专属优惠券）**\n- 命中 block 级规则 R-AD-02：商业推广内容未标注\"广告\"，不得发布。\n- 已阻断，本次不排期。\n\n## 草稿保存结果\n- 草稿 ID：**D-bfc249d5**（版本 1，已创建）。\n\n需要你确认的事项仅 M04 一条（是否按原时段排期）。M04 目前为待确认状态，尚未生效；M05、M09 已阻断不排期。",
+  "usage": {
+    "steps": 5,
+    "tool_calls": 12,
+    "max_steps": 40,
+    "max_tool_calls": 80
+  },
+  "trace": [
+    {
+      "step": 1,
+      "call": 1,
+      "type": "tool_call",
+      "tool": "get_material",
+      "args": {
+        "material_id": "M04"
+      },
+      "basis": "请求已列出 M04，先读取元数据确认素材是否存在及发布要求是否有效",
+      "ok": true,
+      "result_summary": "《全网最低价！降噪耳机限时抢》；必填字段齐全；版权声明状态 valid（未核验）",
+      "next_action": "verify_copyright(M05)、block_material(M09)、query_slots(M04)"
+    },
+    {
+      "step": 1,
+      "call": 2,
+      "type": "tool_call",
+      "tool": "get_material",
+      "args": {
+        "material_id": "M05"
+      },
+      "basis": "请求已列出 M05，先读取元数据确认素材是否存在及发布要求是否有效",
+      "ok": true,
+      "result_summary": "《毕业季混剪》；必填字段齐全；版权声明状态 pending（未核验）",
+      "next_action": "verify_copyright(M05)、block_material(M09)、query_slots(M04)"
+    },
+    {
+      "step": 1,
+      "call": 3,
+      "type": "tool_call",
+      "tool": "get_material",
+      "args": {
+        "material_id": "M09"
+      },
+      "basis": "请求已列出 M09，先读取元数据确认素材是否存在及发布要求是否有效",
+      "ok": true,
+      "result_summary": "《直播间专属优惠券》；必填字段齐全；版权声明状态 valid（未核验）",
+      "next_action": "verify_copyright(M05)、block_material(M09)、query_slots(M04)"
+    },
+    {
+      "step": 1,
+      "call": 4,
+      "type": "tool_call",
+      "tool": "check_rules",
+      "args": {
+        "material_id": "M04"
+      },
+      "basis": "对 M04 进行规则检查，判断是否存在 block/warn/verify 级风险",
+      "ok": true,
+      "result_summary": "命中 R-AD-01(warn)",
+      "next_action": "verify_copyright(M05)、block_material(M09)、query_slots(M04)"
+    },
+    {
+      "step": 1,
+      "call": 5,
+      "type": "tool_call",
+      "tool": "check_rules",
+      "args": {
+        "material_id": "M05"
+      },
+      "basis": "对 M05 进行规则检查，判断是否存在 block/warn/verify 级风险",
+      "ok": true,
+      "result_summary": "命中 R-CP-02(verify)",
+      "next_action": "verify_copyright(M05)、block_material(M09)、query_slots(M04)"
+    },
+    {
+      "step": 1,
+      "call": 6,
+      "type": "tool_call",
+      "tool": "check_rules",
+      "args": {
+        "material_id": "M09"
+      },
+      "basis": "对 M09 进行规则检查，判断是否存在 block/warn/verify 级风险",
+      "ok": true,
+      "result_summary": "命中 R-AD-02(block)",
+      "next_action": "verify_copyright(M05)、block_material(M09)、query_slots(M04)"
+    },
+    {
+      "step": 2,
+      "call": 7,
+      "type": "tool_call",
+      "tool": "verify_copyright",
+      "args": {
+        "material_id": "M05"
+      },
+      "basis": "M05 规则检查命中 verify，需补查版权核验结果再决定",
+      "ok": true,
+      "result_summary": "版权 expired：授权有效期至 2026-10-31，不覆盖发布日期 2026-11-03，视为失效",
+      "next_action": "block_material(M05)、request_confirmation(M04)"
+    },
+    {
+      "step": 2,
+      "call": 8,
+      "type": "tool_call",
+      "tool": "block_material",
+      "args": {
+        "material_id": "M09",
+        "risk_summary": "商业推广内容未标注“广告”（R-AD-02 block），不得发布"
+      },
+      "basis": "M09 规则检查命中 block 级规则，调用阻断",
+      "ok": true,
+      "result_summary": "已阻断 M09：商业推广内容未标注“广告”（R-AD-02 block），不得发布",
+      "next_action": "block_material(M05)、request_confirmation(M04)"
+    },
+    {
+      "step": 2,
+      "call": 9,
+      "type": "tool_call",
+      "tool": "query_slots",
+      "args": {
+        "material_id": "M04",
+        "channel": "app_home",
+        "publish_time": "2026-11-03 14:00"
+      },
+      "basis": "M04 为 preferred 时间且仅命中 warn 风险，先查询要求时段是否可用",
+      "ok": true,
+      "result_summary": "app_home 2026-11-03 14:00 可用",
+      "next_action": "block_material(M05)、request_confirmation(M04)"
+    },
+    {
+      "step": 3,
+      "call": 10,
+      "type": "tool_call",
+      "tool": "block_material",
+      "args": {
+        "material_id": "M05",
+        "risk_summary": "版权授权已失效：LIC-005 有效期至 2026-10-31，不覆盖发布日 2026-11-03"
+      },
+      "basis": "M05 版权核验返回 expired（授权至 2026-10-31，不覆盖 2026-11-03），阻断",
+      "ok": true,
+      "result_summary": "已阻断 M05：版权授权已失效：LIC-005 有效期至 2026-10-31，不覆盖发布日 2026-11-03",
+      "next_action": "save_draft"
+    },
+    {
+      "step": 3,
+      "call": 11,
+      "type": "tool_call",
+      "tool": "request_confirmation",
+      "args": {
+        "material_id": "M04",
+        "question": "M04 命中 warn 级规则 R-AD-01：文案含广告法极限词（命中关键词：全网最、最低价），需修改文案或经法务确认后发布。要求时段 2026-11-03 14:00（app_home）可用，是否仍按此时段排期？",
+        "proposed_slot": ""
+      },
+      "basis": "M04 要求时段可用但命中 warn 风险，登记确认事项供用户决定",
+      "ok": true,
+      "result_summary": "已登记待确认 C-M04-80e03a；用户尚未确认",
+      "next_action": "save_draft"
+    },
+    {
+      "step": 4,
+      "call": 12,
+      "type": "tool_call",
+      "tool": "save_draft",
+      "args": {
+        "entries": [
+          {
+            "material_id": "M04",
+            "decision": "pending_confirmation",
+            "suggested_slot": "2026-11-03 14:00",
+            "risk_reasons": [
+              "命中 warn 级规则 R-AD-01：文案含广告法极限词（命中关键词：全网最、最低价），需修改文案或经法务确认"
+            ],
+            "pending_items": [
+              "是否仍按 2026-11-03 14:00 在 app_home 排期（需修改文案或经法务确认）"
+            ]
+          },
+          {
+            "material_id": "M05",
+            "decision": "blocked",
+            "suggested_slot": "",
+            "risk_reasons": [
+              "版权授权已失效：LIC-005 有效期至 2026-10-31，不覆盖发布日 2026-11-03"
+            ],
+            "pending_items": []
+          },
+          {
+            "material_id": "M09",
+            "decision": "blocked",
+            "suggested_slot": "",
+            "risk_reasons": [
+              "商业推广内容未标注“广告”（R-AD-02 block），不得发布"
+            ],
+            "pending_items": []
+          }
+        ]
+      },
+      "basis": "三个素材均已处理完毕，一次性提交排期草稿",
+      "ok": true,
+      "result_summary": "created：D-bfc249d5 v1（草稿已创建）",
+      "next_action": "结束，输出总结"
+    }
+  ],
+  "inputs": {
+    "request": "examples/inputs/rule_risk.json",
+    "schedule": "data/schedule.json",
+    "drafts": "examples/real-deepseek-v4-pro/drafts/rule_risk.drafts.json"
+  }
+}

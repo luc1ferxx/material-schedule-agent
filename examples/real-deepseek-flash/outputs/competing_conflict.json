@@ -1,0 +1,347 @@
+{
+  "status": "completed",
+  "status_reason": null,
+  "mode": "openai-compatible:deepseek-flash",
+  "mode_notice": null,
+  "request_id": "REQ-1103-COMPETE",
+  "request_key": "627f68258021f652",
+  "scope": "items",
+  "as_of": "2026-10-29 09:00",
+  "input_notes": [],
+  "published": false,
+  "publish_notice": "本 Agent 只生成排期草稿，没有发布能力；所有条目需用户确认后才生效",
+  "draft": {
+    "saved": true,
+    "result": "created",
+    "draft_id": "D-627f6825",
+    "version": 1,
+    "message": "草稿已创建",
+    "save_attempts": 1
+  },
+  "materials": [
+    {
+      "material_id": "M01",
+      "title": "秋季新品开箱",
+      "decision": "pending_confirmation",
+      "review_status": "待确认",
+      "channel": "app_home",
+      "requested_slot": "2026-11-03 18:00",
+      "time_rule": "preferred",
+      "suggested_slot": "2026-11-03 17:00",
+      "slot_changed": true,
+      "risk_reasons": [
+        "登记的期望时段 2026-11-03 18:00（app_home）已被已有排期 S-1103-02《晚间档推荐》占用",
+        "更近的 19:00 已提议给本次请求中的 M08，因此最接近的可用替代为 17:00（另有 16:00、15:00）",
+        "规则检查无命中，版权 LIC-001 status=valid"
+      ],
+      "pending_items": [
+        "是否同意 M01 改到 2026-11-03 17:00（app_home）发布"
+      ],
+      "risk_facts": {
+        "rule_hits": [],
+        "copyright_verified": null,
+        "missing_fields": [],
+        "request_problems": [],
+        "already_scheduled": [],
+        "blocked": false
+      },
+      "confirmations": [
+        {
+          "confirmation_id": "C-M01-775fcf",
+          "question": "M01（秋季新品开箱）登记的期望发布时间为 2026-11-03 18:00（app_home，time_rule=preferred），查询结果显示该时段已被已有排期 S-1103-02《晚间档推荐》占用；19:00 已提议给本次请求中的 M08，因此剩余最接近的可用替代时段为 17:00（另有 16:00、15:00）。是否同意改到 2026-11-03 17:00？",
+          "proposed_slot": "2026-11-03 17:00",
+          "status": "awaiting_user"
+        }
+      ],
+      "confirm_state": "awaiting_user_decision",
+      "draft_status": "已写入草稿 D-627f6825",
+      "tool_facts": {
+        "found": true,
+        "missing_fields": [],
+        "already_scheduled": [],
+        "rule_hits": [],
+        "copyright_declared": "valid",
+        "copyright_verified": null,
+        "slot_available": false,
+        "slot_conflict": "已被已有排期 S-1103-02《晚间档推荐》占用",
+        "blocked": false
+      }
+    },
+    {
+      "material_id": "M08",
+      "title": "新品发布会直播预热",
+      "decision": "pending_confirmation",
+      "review_status": "待确认",
+      "channel": "app_home",
+      "requested_slot": "2026-11-03 20:00",
+      "time_rule": "fixed",
+      "suggested_slot": null,
+      "slot_changed": false,
+      "risk_reasons": [
+        "登记的硬性发布时间 2026-11-03 20:00（app_home）已被已有排期 S-1103-03《直播间开播提醒》占用，硬性时间无法满足",
+        "按接近程度排序的可用替代为 19:00、22:00、17:00；更近的 21:00 已被 S-1103-04《品牌故事》占用",
+        "规则检查无命中，版权 LIC-008 status=valid；硬性时间未经用户同意不得改变，故草稿不填建议时段"
+      ],
+      "pending_items": [
+        "是否同意 M08 硬性发布时间由 2026-11-03 20:00 改到 19:00（app_home）；如不同意，请指定其他时段或选择不排期"
+      ],
+      "risk_facts": {
+        "rule_hits": [],
+        "copyright_verified": null,
+        "missing_fields": [],
+        "request_problems": [],
+        "already_scheduled": [],
+        "blocked": false
+      },
+      "confirmations": [
+        {
+          "confirmation_id": "C-M08-ea879e",
+          "question": "M08（新品发布会直播预热）登记的硬性发布时间为 2026-11-03 20:00（app_home），查询结果显示该时段已被已有排期 S-1103-03《直播间开播提醒》占用，硬性时间无法满足。按接近程度排序的可用替代时段为 19:00、22:00、17:00（更近的 21:00 已被 S-1103-04《品牌故事》占用）。是否同意改期到 2026-11-03 19:00？若不同意改期，请指定其他时段或选择不排期。注意：该素材为 20:00 发布会直播的预热短片，19:00 是否仍在预热节点内属于推断，请确认。",
+          "proposed_slot": "2026-11-03 19:00",
+          "status": "awaiting_user"
+        }
+      ],
+      "confirm_state": "awaiting_user_decision",
+      "draft_status": "已写入草稿 D-627f6825",
+      "tool_facts": {
+        "found": true,
+        "missing_fields": [],
+        "already_scheduled": [],
+        "rule_hits": [],
+        "copyright_declared": "valid",
+        "copyright_verified": null,
+        "slot_available": false,
+        "slot_conflict": "已被已有排期 S-1103-03《直播间开播提醒》占用",
+        "blocked": false
+      }
+    }
+  ],
+  "pending_confirmations": [
+    {
+      "material_id": "M01",
+      "confirmation_id": "C-M01-775fcf",
+      "question": "M01（秋季新品开箱）登记的期望发布时间为 2026-11-03 18:00（app_home，time_rule=preferred），查询结果显示该时段已被已有排期 S-1103-02《晚间档推荐》占用；19:00 已提议给本次请求中的 M08，因此剩余最接近的可用替代时段为 17:00（另有 16:00、15:00）。是否同意改到 2026-11-03 17:00？",
+      "proposed_slot": "2026-11-03 17:00",
+      "status": "awaiting_user"
+    },
+    {
+      "material_id": "M08",
+      "confirmation_id": "C-M08-ea879e",
+      "question": "M08（新品发布会直播预热）登记的硬性发布时间为 2026-11-03 20:00（app_home），查询结果显示该时段已被已有排期 S-1103-03《直播间开播提醒》占用，硬性时间无法满足。按接近程度排序的可用替代时段为 19:00、22:00、17:00（更近的 21:00 已被 S-1103-04《品牌故事》占用）。是否同意改期到 2026-11-03 19:00？若不同意改期，请指定其他时段或选择不排期。注意：该素材为 20:00 发布会直播的预热短片，19:00 是否仍在预热节点内属于推断，请确认。",
+      "proposed_slot": "2026-11-03 19:00",
+      "status": "awaiting_user"
+    }
+  ],
+  "guard_flags": [],
+  "model_summary": "已处理完成，草稿已保存（草稿 ID：D-627f6825，版本 1）。以下是两个素材的结论：\n\n## 素材结论\n\n**M01 · 秋季新品开箱（app_home，期望时段 2026-11-03 18:00，preferred）**\n- 元数据完整，规则检查无命中，版权 LIC-001 状态 valid，不在已有排期中。由此判断没有 hard 问题。\n- 期望时段 18:00 已被已有排期 S-1103-02《晚间档推荐》占用。\n- 建议时段：**2026-11-03 17:00**（更近的 19:00 已提议给本次请求中的 M08；其余可用为 16:00、15:00）。\n- 结论：pending_confirmation，需要您确认改到 17:00。\n\n**M08 · 新品发布会直播预热（app_home，硬性时间 2026-11-03 20:00，fixed）**\n- 元数据完整，规则检查无命中，版权 LIC-008 状态 valid，不在已有排期中。\n- 硬性时间 20:00 已被已有排期 S-1103-03《直播间开播提醒》占用，硬性要求无法满足；更近的 21:00 也已被 S-1103-04《品牌故事》占用。\n- 可用的替代时段按接近程度依次为：19:00、22:00、17:00。\n- 硬性时间未经您同意不能改动，因此草稿中该素材的建议时段**留空**；已提议 19:00，等待您确认。\n- 结论：pending_confirmation。\n\n## 待您确认的事项\n1. M01 是否同意改到 2026-11-03 17:00。\n2. M08 是否同意把硬性发布时间从 20:00 改到 19:00；如不同意，请指定其他时段，或选择不排期。\n\n## 草稿保存情况\n- save_draft 返回 `created`，草稿 ID **D-627f6825**（版本 1）。\n- 该草稿仅为待确认草稿，尚未生效；两个素材都未发布、未上线。request_confirmation 中的 19:00 / 17:00 只在本次请求内暂留，未写入正式排期，也未锁定。\n- 补充说明（推断）：M08 描述为“配合 20:00 发布会直播的预热短片”，19:00 是否仍在预热节点内属于我的推断，请一并判断。",
+  "usage": {
+    "steps": 8,
+    "tool_calls": 10,
+    "max_steps": 40,
+    "max_tool_calls": 80
+  },
+  "trace": [
+    {
+      "step": 1,
+      "type": "model_note",
+      "text": "我会先读取这两个素材的元数据。"
+    },
+    {
+      "step": 1,
+      "call": 1,
+      "type": "tool_call",
+      "tool": "get_material",
+      "args": {
+        "material_id": "M01"
+      },
+      "basis": "request_id REQ-1103-COMPETE 已列出 M01（app_home，2026-11-03 18:00，preferred），先读取元数据",
+      "ok": true,
+      "result_summary": "《秋季新品开箱》；必填字段齐全；版权声明状态 valid（未核验）",
+      "next_action": "check_rules(M01)、check_rules(M08)"
+    },
+    {
+      "step": 1,
+      "call": 2,
+      "type": "tool_call",
+      "tool": "get_material",
+      "args": {
+        "material_id": "M08"
+      },
+      "basis": "request_id REQ-1103-COMPETE 已列出 M08（app_home，2026-11-03 20:00，fixed），先读取元数据",
+      "ok": true,
+      "result_summary": "《新品发布会直播预热》；必填字段齐全；版权声明状态 valid（未核验）",
+      "next_action": "check_rules(M01)、check_rules(M08)"
+    },
+    {
+      "step": 2,
+      "type": "model_note",
+      "text": "两个素材均已登记且信息完整。现在进行审核规则检查。"
+    },
+    {
+      "step": 2,
+      "call": 3,
+      "type": "tool_call",
+      "tool": "check_rules",
+      "args": {
+        "material_id": "M01"
+      },
+      "basis": "M01 元数据完整、版权 status=valid、未在已有排期，继续按规则检查",
+      "ok": true,
+      "result_summary": "无规则风险",
+      "next_action": "query_slots(M01)、query_slots(M08)"
+    },
+    {
+      "step": 2,
+      "call": 4,
+      "type": "tool_call",
+      "tool": "check_rules",
+      "args": {
+        "material_id": "M08"
+      },
+      "basis": "M08 元数据完整、版权 status=valid、未在已有排期，继续按规则检查",
+      "ok": true,
+      "result_summary": "无规则风险",
+      "next_action": "query_slots(M01)、query_slots(M08)"
+    },
+    {
+      "step": 3,
+      "type": "model_note",
+      "text": "规则检查均无问题。现在查询两个素材在 app_home 要求时间的时段可用性。"
+    },
+    {
+      "step": 3,
+      "call": 5,
+      "type": "tool_call",
+      "tool": "query_slots",
+      "args": {
+        "material_id": "M01",
+        "channel": "app_home",
+        "publish_time": "2026-11-03 18:00"
+      },
+      "basis": "M01 规则检查无风险，查询 preferred 时段 2026-11-03 18:00 是否可用",
+      "ok": true,
+      "result_summary": "app_home 2026-11-03 18:00 不可用（已被已有排期 S-1103-02《晚间档推荐》占用）；替代时段 ['2026-11-03 19:00', '2026-11-03 17:00', '2026-11-03 16:00']",
+      "next_action": "request_confirmation(M08)"
+    },
+    {
+      "step": 3,
+      "call": 6,
+      "type": "tool_call",
+      "tool": "query_slots",
+      "args": {
+        "material_id": "M08",
+        "channel": "app_home",
+        "publish_time": "2026-11-03 20:00"
+      },
+      "basis": "M08 规则检查无风险，查询硬性时段 2026-11-03 20:00 是否可用",
+      "ok": true,
+      "result_summary": "app_home 2026-11-03 20:00 不可用（已被已有排期 S-1103-03《直播间开播提醒》占用）；更近的时段也不可用：21:00（已被已有排期 S-1103-04《品牌故事》占用）；替代时段 ['2026-11-03 19:00', '2026-11-03 22:00', '2026-11-03 17:00']",
+      "next_action": "request_confirmation(M08)"
+    },
+    {
+      "step": 4,
+      "type": "model_note",
+      "text": "两个要求时间都已被已有排期占用。两个素材的首选替代时段都是 19:00，因此我会先登记其中一个的确认事项，再为另一个重新查询时段。"
+    },
+    {
+      "step": 4,
+      "call": 7,
+      "type": "tool_call",
+      "tool": "request_confirmation",
+      "args": {
+        "material_id": "M08",
+        "question": "M08（新品发布会直播预热）登记的硬性发布时间为 2026-11-03 20:00（app_home），查询结果显示该时段已被已有排期 S-1103-03《直播间开播提醒》占用，硬性时间无法满足。按接近程度排序的可用替代时段为 19:00、22:00、17:00（更近的 21:00 已被 S-1103-04《品牌故事》占用）。是否同意改期到 2026-11-03 19:00？若不同意改期，请指定其他时段或选择不排期。注意：该素材为 20:00 发布会直播的预热短片，19:00 是否仍在预热节点内属于推断，请确认。",
+        "proposed_slot": "2026-11-03 19:00"
+      },
+      "basis": "query_slots 返回 M08 硬性时段 20:00 已被 S-1103-03 占用，最近可用替代为 19:00，需用户确认硬性时间改期",
+      "ok": true,
+      "result_summary": "已登记待确认 C-M08-ea879e，本次请求内暂留 2026-11-03 19:00（未写入排期）；用户尚未确认",
+      "next_action": "query_slots(M01)"
+    },
+    {
+      "step": 5,
+      "type": "model_note",
+      "text": "M08 的替代时段确认已登记。现在重新查询 M01 的可用时段，因为 19:00 已提议给 M08。"
+    },
+    {
+      "step": 5,
+      "call": 8,
+      "type": "tool_call",
+      "tool": "query_slots",
+      "args": {
+        "channel": "app_home",
+        "material_id": "M01",
+        "publish_time": "2026-11-03 18:00"
+      },
+      "basis": "M08 的 19:00 已通过 C-M08-ea879e 登记提议，重新查询 M01 preferred 时段 18:00 剩余可选替代",
+      "ok": true,
+      "result_summary": "app_home 2026-11-03 18:00 不可用（已被已有排期 S-1103-02《晚间档推荐》占用）；更近的时段也不可用：19:00（已提议给本次请求中的 M08）；替代时段 ['2026-11-03 17:00', '2026-11-03 16:00', '2026-11-03 15:00']",
+      "next_action": "request_confirmation(M01)"
+    },
+    {
+      "step": 6,
+      "call": 9,
+      "type": "tool_call",
+      "tool": "request_confirmation",
+      "args": {
+        "material_id": "M01",
+        "question": "M01（秋季新品开箱）登记的期望发布时间为 2026-11-03 18:00（app_home，time_rule=preferred），查询结果显示该时段已被已有排期 S-1103-02《晚间档推荐》占用；19:00 已提议给本次请求中的 M08，因此剩余最接近的可用替代时段为 17:00（另有 16:00、15:00）。是否同意改到 2026-11-03 17:00？",
+        "proposed_slot": "2026-11-03 17:00"
+      },
+      "basis": "重新查询显示 M01 的 18:00 仍被 S-1103-02 占用，19:00 已提议给 M08，最近可用替代为 17:00，需登记确认",
+      "ok": true,
+      "result_summary": "已登记待确认 C-M01-775fcf，本次请求内暂留 2026-11-03 17:00（未写入排期）；用户尚未确认",
+      "next_action": "save_draft"
+    },
+    {
+      "step": 7,
+      "type": "model_note",
+      "text": "两个素材的确认均已登记。现在保存草稿。"
+    },
+    {
+      "step": 7,
+      "call": 10,
+      "type": "tool_call",
+      "tool": "save_draft",
+      "args": {
+        "entries": [
+          {
+            "material_id": "M01",
+            "decision": "pending_confirmation",
+            "suggested_slot": "2026-11-03 17:00",
+            "risk_reasons": [
+              "登记的期望时段 2026-11-03 18:00（app_home）已被已有排期 S-1103-02《晚间档推荐》占用",
+              "更近的 19:00 已提议给本次请求中的 M08，因此最接近的可用替代为 17:00（另有 16:00、15:00）",
+              "规则检查无命中，版权 LIC-001 status=valid"
+            ],
+            "pending_items": [
+              "是否同意 M01 改到 2026-11-03 17:00（app_home）发布"
+            ]
+          },
+          {
+            "material_id": "M08",
+            "decision": "pending_confirmation",
+            "suggested_slot": "",
+            "risk_reasons": [
+              "登记的硬性发布时间 2026-11-03 20:00（app_home）已被已有排期 S-1103-03《直播间开播提醒》占用，硬性时间无法满足",
+              "按接近程度排序的可用替代为 19:00、22:00、17:00；更近的 21:00 已被 S-1103-04《品牌故事》占用",
+              "规则检查无命中，版权 LIC-008 status=valid；硬性时间未经用户同意不得改变，故草稿不填建议时段"
+            ],
+            "pending_items": [
+              "是否同意 M08 硬性发布时间由 2026-11-03 20:00 改到 19:00（app_home）；如不同意，请指定其他时段或选择不排期"
+            ]
+          }
+        ]
+      },
+      "basis": "M01 与 M08 均已就替代时段登记确认（C-M01-775fcf、C-M08-ea879e），保存一整版待用户确认的草稿",
+      "ok": true,
+      "result_summary": "created：D-627f6825 v1（草稿已创建）",
+      "next_action": "结束，输出总结"
+    }
+  ],
+  "inputs": {
+    "request": "examples/inputs/competing_conflict.json",
+    "schedule": "data/schedule.json",
+    "drafts": "examples/real-deepseek-flash/drafts/competing_conflict.drafts.json"
+  }
+}

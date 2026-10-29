@@ -1,0 +1,21 @@
+{
+  "request_id": "REQ-1103-RISK",
+  "as_of": "2026-10-29 09:00",
+  "items": [
+    {
+      "material_id": "M04",
+      "channel": "app_home",
+      "publish_time": "2026-11-03 14:00"
+    },
+    {
+      "material_id": "M05",
+      "channel": "app_home",
+      "publish_time": "2026-11-03 16:00"
+    },
+    {
+      "material_id": "M09",
+      "channel": "douyin",
+      "publish_time": "2026-11-03 16:00"
+    }
+  ]
+}

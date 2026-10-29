@@ -1,0 +1,97 @@
+{
+  "drafts": {
+    "fe17af77adffa2e3": {
+      "draft_id": "D-fe17af77",
+      "request_key": "fe17af77adffa2e3",
+      "request_id": "REQ-1103-MISSING",
+      "status": "draft",
+      "version": 1,
+      "created_at": "2026-10-29T12:40:03",
+      "updated_at": "2026-10-29T12:40:03",
+      "plan_hash": "68bdd112a474e61e3f8ee6cf4739ca6f184618d1457ec241fd07e47954342ce7",
+      "entries": [
+        {
+          "material_id": "M03",
+          "title": "双十一会场海报",
+          "decision": "needs_info",
+          "review_status": "信息缺失，待补充",
+          "channel": "app_home",
+          "requested_slot": "2026-11-03 15:00",
+          "time_rule": "preferred",
+          "suggested_slot": null,
+          "slot_changed": false,
+          "risk_reasons": [],
+          "pending_items": [
+            "请补充素材字段：image_url、copyright"
+          ],
+          "risk_facts": {
+            "rule_hits": null,
+            "copyright_verified": null,
+            "missing_fields": [
+              "image_url",
+              "copyright"
+            ],
+            "request_problems": [],
+            "already_scheduled": [],
+            "blocked": false
+          },
+          "confirmations": [],
+          "confirm_state": "not_schedulable"
+        },
+        {
+          "material_id": "M99",
+          "title": null,
+          "decision": "needs_info",
+          "review_status": "信息缺失，待补充",
+          "channel": "app_home",
+          "requested_slot": "2026-11-03 16:00",
+          "time_rule": "preferred",
+          "suggested_slot": null,
+          "slot_changed": false,
+          "risk_reasons": [],
+          "pending_items": [
+            "素材库中不存在 M99，请核对素材 ID"
+          ],
+          "risk_facts": {
+            "rule_hits": null,
+            "copyright_verified": null,
+            "missing_fields": [],
+            "request_problems": [],
+            "already_scheduled": [],
+            "blocked": false
+          },
+          "confirmations": [],
+          "confirm_state": "not_schedulable"
+        },
+        {
+          "material_id": "M02",
+          "title": "周末城市 vlog 合集",
+          "decision": "needs_info",
+          "review_status": "信息缺失，待补充",
+          "channel": "douyin",
+          "requested_slot": null,
+          "time_rule": "preferred",
+          "suggested_slot": null,
+          "slot_changed": false,
+          "risk_reasons": [],
+          "pending_items": [
+            "请补充或修正发布要求：publish_time（发布时间要求）缺失"
+          ],
+          "risk_facts": {
+            "rule_hits": null,
+            "copyright_verified": null,
+            "missing_fields": [],
+            "request_problems": [
+              "publish_time（发布时间要求）缺失"
+            ],
+            "already_scheduled": [],
+            "blocked": false
+          },
+          "confirmations": [],
+          "confirm_state": "not_schedulable"
+        }
+      ],
+      "history": []
+    }
+  }
+}

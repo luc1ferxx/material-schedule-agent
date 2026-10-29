@@ -1,0 +1,7 @@
+{
+  "_note": "渠道可发布时段：按整点发布，start/end 均为可用整点（含）",
+  "channels": {
+    "app_home": {"name": "App 首页推荐位", "start": "08:00", "end": "22:00"},
+    "douyin": {"name": "抖音官方号", "start": "09:00", "end": "23:00"}
+  }
+}

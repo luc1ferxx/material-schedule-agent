@@ -1,0 +1,170 @@
+{
+  "status": "completed",
+  "status_reason": null,
+  "mode": "offline_mock",
+  "mode_notice": "离线 Mock：决策由固定规则产生，只验证流程，不代表真实模型的决策效果",
+  "request_id": "REQ-1103-CONFLICT",
+  "request_key": "98939b91f9cb3755",
+  "scope": "items",
+  "as_of": "2026-10-29 09:00",
+  "input_notes": [],
+  "published": false,
+  "publish_notice": "本 Agent 只生成排期草稿，没有发布能力；所有条目需用户确认后才生效",
+  "draft": {
+    "saved": true,
+    "result": "created",
+    "draft_id": "D-98939b91",
+    "version": 1,
+    "message": "草稿已创建",
+    "save_attempts": 1
+  },
+  "materials": [
+    {
+      "material_id": "M01",
+      "title": "秋季新品开箱",
+      "decision": "pending_confirmation",
+      "review_status": "待确认",
+      "channel": "app_home",
+      "requested_slot": "2026-11-03 18:00",
+      "time_rule": "preferred",
+      "suggested_slot": "2026-11-03 19:00",
+      "slot_changed": true,
+      "risk_reasons": [],
+      "pending_items": [
+        "确认改期：2026-11-03 18:00 → 2026-11-03 19:00"
+      ],
+      "risk_facts": {
+        "rule_hits": [],
+        "copyright_verified": null,
+        "missing_fields": [],
+        "request_problems": [],
+        "already_scheduled": [],
+        "blocked": false
+      },
+      "confirmations": [
+        {
+          "confirmation_id": "C-M01-5c2294",
+          "question": "M01 要求时间 2026-11-03 18:00 不可用（已被已有排期 S-1103-02《晚间档推荐》占用），建议改到 2026-11-03 19:00，是否同意？",
+          "proposed_slot": "2026-11-03 19:00",
+          "status": "awaiting_user"
+        }
+      ],
+      "confirm_state": "awaiting_user_decision",
+      "draft_status": "已写入草稿 D-98939b91",
+      "tool_facts": {
+        "found": true,
+        "missing_fields": [],
+        "already_scheduled": [],
+        "rule_hits": [],
+        "copyright_declared": "valid",
+        "copyright_verified": null,
+        "slot_available": false,
+        "slot_conflict": "已被已有排期 S-1103-02《晚间档推荐》占用",
+        "blocked": false
+      }
+    }
+  ],
+  "pending_confirmations": [
+    {
+      "material_id": "M01",
+      "confirmation_id": "C-M01-5c2294",
+      "question": "M01 要求时间 2026-11-03 18:00 不可用（已被已有排期 S-1103-02《晚间档推荐》占用），建议改到 2026-11-03 19:00，是否同意？",
+      "proposed_slot": "2026-11-03 19:00",
+      "status": "awaiting_user"
+    }
+  ],
+  "guard_flags": [],
+  "model_summary": "【离线 Mock】处理结果：\n- M01：待确认，建议时段 2026-11-03 19:00；待确认/补充：确认改期：2026-11-03 18:00 → 2026-11-03 19:00\n草稿保存结果：created（D-98939b91 v1）。仅为草稿，需你确认，未做任何发布。",
+  "usage": {
+    "steps": 6,
+    "tool_calls": 5,
+    "max_steps": 40,
+    "max_tool_calls": 80
+  },
+  "trace": [
+    {
+      "step": 1,
+      "call": 1,
+      "type": "tool_call",
+      "tool": "get_material",
+      "args": {
+        "material_id": "M01"
+      },
+      "basis": "读取 M01 元数据，确认信息是否完整",
+      "ok": true,
+      "result_summary": "《秋季新品开箱》；必填字段齐全；版权声明状态 valid（未核验）",
+      "next_action": "check_rules(M01)"
+    },
+    {
+      "step": 2,
+      "call": 2,
+      "type": "tool_call",
+      "tool": "check_rules",
+      "args": {
+        "material_id": "M01"
+      },
+      "basis": "M01 信息齐全，按审核规则检查",
+      "ok": true,
+      "result_summary": "无规则风险",
+      "next_action": "query_slots(M01)"
+    },
+    {
+      "step": 3,
+      "call": 3,
+      "type": "tool_call",
+      "tool": "query_slots",
+      "args": {
+        "material_id": "M01",
+        "channel": "app_home",
+        "publish_time": "2026-11-03 18:00"
+      },
+      "basis": "M01 审核无阻断风险，查询要求时段 2026-11-03 18:00 是否可用",
+      "ok": true,
+      "result_summary": "app_home 2026-11-03 18:00 不可用（已被已有排期 S-1103-02《晚间档推荐》占用）；替代时段 ['2026-11-03 19:00', '2026-11-03 17:00', '2026-11-03 16:00']",
+      "next_action": "request_confirmation(M01)"
+    },
+    {
+      "step": 4,
+      "call": 4,
+      "type": "tool_call",
+      "tool": "request_confirmation",
+      "args": {
+        "material_id": "M01",
+        "question": "M01 要求时间 2026-11-03 18:00 不可用（已被已有排期 S-1103-02《晚间档推荐》占用），建议改到 2026-11-03 19:00，是否同意？",
+        "proposed_slot": "2026-11-03 19:00"
+      },
+      "basis": "要求时段不可用，2026-11-03 19:00 可用，改期需用户确认",
+      "ok": true,
+      "result_summary": "已登记待确认 C-M01-5c2294，本次请求内暂留 2026-11-03 19:00（未写入排期）；用户尚未确认",
+      "next_action": "save_draft"
+    },
+    {
+      "step": 5,
+      "call": 5,
+      "type": "tool_call",
+      "tool": "save_draft",
+      "args": {
+        "entries": [
+          {
+            "material_id": "M01",
+            "decision": "pending_confirmation",
+            "suggested_slot": "2026-11-03 19:00",
+            "risk_reasons": [],
+            "pending_items": [
+              "确认改期：2026-11-03 18:00 → 2026-11-03 19:00"
+            ]
+          }
+        ]
+      },
+      "basis": "全部素材已处理，提交排期草稿",
+      "ok": true,
+      "result_summary": "created：D-98939b91 v1（草稿已创建）",
+      "next_action": "结束，输出总结"
+    }
+  ],
+  "inputs": {
+    "request": "examples/inputs/slot_conflict.json",
+    "schedule": "data/schedule.json",
+    "drafts": "examples/drafts/slot_conflict.drafts.json"
+  }
+}

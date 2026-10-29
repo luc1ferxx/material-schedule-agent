@@ -1,0 +1,261 @@
+{
+  "status": "save_failed",
+  "status_reason": "草稿库当前只读，写入被拒绝；草稿未保存",
+  "mode": "openai-compatible:deepseek-flash",
+  "mode_notice": null,
+  "request_id": "REQ-1103-SAVEFAIL",
+  "request_key": "b940d3638c5c9d84",
+  "scope": "items",
+  "as_of": "2026-10-29 09:00",
+  "input_notes": [],
+  "published": false,
+  "publish_notice": "本 Agent 只生成排期草稿，没有发布能力；所有条目需用户确认后才生效",
+  "draft": {
+    "saved": false,
+    "result": "save_failed",
+    "error_code": "STORAGE_READ_ONLY",
+    "retryable": false,
+    "message": "草稿库当前只读，写入被拒绝；草稿未保存",
+    "save_attempts": 1
+  },
+  "materials": [
+    {
+      "material_id": "M02",
+      "title": "周末城市 vlog 合集",
+      "decision": "schedule",
+      "review_status": "审核通过，按要求时段排期",
+      "channel": "app_home",
+      "requested_slot": "2026-11-03 10:00",
+      "time_rule": "preferred",
+      "suggested_slot": "2026-11-03 10:00",
+      "slot_changed": false,
+      "risk_reasons": [],
+      "pending_items": [],
+      "risk_facts": {
+        "rule_hits": [],
+        "copyright_verified": null,
+        "missing_fields": [],
+        "request_problems": [],
+        "already_scheduled": [],
+        "blocked": false
+      },
+      "confirmations": [],
+      "confirm_state": "not_saved",
+      "draft_status": "草稿未保存",
+      "tool_facts": {
+        "found": true,
+        "missing_fields": [],
+        "already_scheduled": [],
+        "rule_hits": [],
+        "copyright_declared": "valid",
+        "copyright_verified": null,
+        "slot_available": true,
+        "slot_conflict": null,
+        "blocked": false
+      }
+    },
+    {
+      "material_id": "M07",
+      "title": "咖啡拉花教程",
+      "decision": "schedule",
+      "review_status": "审核通过，按要求时段排期",
+      "channel": "douyin",
+      "requested_slot": "2026-11-03 15:00",
+      "time_rule": "preferred",
+      "suggested_slot": "2026-11-03 15:00",
+      "slot_changed": false,
+      "risk_reasons": [],
+      "pending_items": [],
+      "risk_facts": {
+        "rule_hits": [
+          "R-CP-02(verify)"
+        ],
+        "copyright_verified": "valid",
+        "missing_fields": [],
+        "request_problems": [],
+        "already_scheduled": [],
+        "blocked": false
+      },
+      "confirmations": [],
+      "confirm_state": "not_saved",
+      "draft_status": "草稿未保存",
+      "tool_facts": {
+        "found": true,
+        "missing_fields": [],
+        "already_scheduled": [],
+        "rule_hits": [
+          "R-CP-02(verify)"
+        ],
+        "copyright_declared": "pending",
+        "copyright_verified": "valid",
+        "slot_available": true,
+        "slot_conflict": null,
+        "blocked": false
+      }
+    }
+  ],
+  "pending_confirmations": [],
+  "guard_flags": [],
+  "model_summary": "## 处理结果\n\n**逐素材结论**\n\n| 素材 | 渠道 | 请求时段（time_rule） | 结论 | 建议时段 |\n|---|---|---|---|---|\n| M02 周末城市 vlog 合集 | app_home | 2026-11-03 10:00（preferred） | schedule | 2026-11-03 10:00 |\n| M07 咖啡拉花教程 | douyin | 2026-11-03 15:00（preferred） | schedule | 2026-11-03 15:00 |\n\n- **M02**：素材存在、必填字段无缺失、不在已有排期中、版权记录 status=valid；规则检查无命中（highest_level=none）；查询 app_home 2026-11-03 10:00 返回 requested_available=true，无冲突。按请求时段排期，无需确认。\n- **M07**：素材存在、必填字段无缺失、不在已有排期中；规则检查命中 R-CP-02（level=verify，版权状态 pending），按要求补查版权登记库，返回 status=valid，授权至 2027-06-30，覆盖发布日期 2026-11-03；查询 douyin 2026-11-03 15:00 返回 requested_available=true，无冲突。按请求时段排期，无需确认。\n\n**待用户确认事项**：无（两项均按请求时段排期，未发起任何确认登记，也无暂留时段）。\n\n**草稿保存结果：失败，草稿未保存。**\nsave_draft 返回 `ok=false`，错误码 `STORAGE_READ_ONLY`，message「草稿库当前只读，写入被拒绝；草稿未保存」，retryable=false（不可重试），因此本次未重试。\n\n说明：以上 M02/M07 的结论和建议时段仅为本次核对结果，**未写入任何排期**；草稿库恢复可写后需要重新提交保存，且草稿仍需你确认后才生效。本次没有发布任何内容。",
+  "usage": {
+    "steps": 6,
+    "tool_calls": 8,
+    "max_steps": 40,
+    "max_tool_calls": 80
+  },
+  "trace": [
+    {
+      "step": 1,
+      "type": "model_note",
+      "text": "我会先获取这两个素材的元数据。"
+    },
+    {
+      "step": 1,
+      "call": 1,
+      "type": "tool_call",
+      "tool": "get_material",
+      "args": {
+        "material_id": "M02"
+      },
+      "basis": "请求列出 M02（app_home 2026-11-03 10:00 preferred），先读取元数据",
+      "ok": true,
+      "result_summary": "《周末城市 vlog 合集》；必填字段齐全；版权声明状态 valid（未核验）",
+      "next_action": "check_rules(M02)、check_rules(M07)"
+    },
+    {
+      "step": 1,
+      "call": 2,
+      "type": "tool_call",
+      "tool": "get_material",
+      "args": {
+        "material_id": "M07"
+      },
+      "basis": "请求列出 M07（douyin 2026-11-03 15:00 preferred），先读取元数据",
+      "ok": true,
+      "result_summary": "《咖啡拉花教程》；必填字段齐全；版权声明状态 pending（未核验）",
+      "next_action": "check_rules(M02)、check_rules(M07)"
+    },
+    {
+      "step": 2,
+      "type": "model_note",
+      "text": "两个素材都存在，且没有缺失字段。现在检查规则。"
+    },
+    {
+      "step": 2,
+      "call": 3,
+      "type": "tool_call",
+      "tool": "check_rules",
+      "args": {
+        "material_id": "M02"
+      },
+      "basis": "M02 元数据完整、版权 valid、无重复排期，进入规则检查",
+      "ok": true,
+      "result_summary": "无规则风险",
+      "next_action": "query_slots(M02)、verify_copyright(M07)"
+    },
+    {
+      "step": 2,
+      "call": 4,
+      "type": "tool_call",
+      "tool": "check_rules",
+      "args": {
+        "material_id": "M07"
+      },
+      "basis": "M07 元数据完整、无重复排期，版权 status=pending，进入规则检查",
+      "ok": true,
+      "result_summary": "命中 R-CP-02(verify)",
+      "next_action": "query_slots(M02)、verify_copyright(M07)"
+    },
+    {
+      "step": 3,
+      "type": "model_note",
+      "text": "M02 没有规则命中；M07 命中 verify 级规则，需补查版权。"
+    },
+    {
+      "step": 3,
+      "call": 5,
+      "type": "tool_call",
+      "tool": "query_slots",
+      "args": {
+        "material_id": "M02",
+        "channel": "app_home",
+        "publish_time": "2026-11-03 10:00"
+      },
+      "basis": "M02 规则检查无命中（highest_level=none），查询 app_home 2026-11-03 10:00 是否可用",
+      "ok": true,
+      "result_summary": "app_home 2026-11-03 10:00 可用",
+      "next_action": "query_slots(M07)"
+    },
+    {
+      "step": 3,
+      "call": 6,
+      "type": "tool_call",
+      "tool": "verify_copyright",
+      "args": {
+        "material_id": "M07"
+      },
+      "basis": "M07 规则检查命中 R-CP-02（level=verify，版权 pending），按要求补查版权登记库",
+      "ok": true,
+      "result_summary": "版权 valid：授权有效至 2027-06-30，覆盖发布日期 2026-11-03",
+      "next_action": "query_slots(M07)"
+    },
+    {
+      "step": 4,
+      "type": "model_note",
+      "text": "M02 的时段可用，M07 的版权补查结果为 valid。现在查询 M07 的时段。"
+    },
+    {
+      "step": 4,
+      "call": 7,
+      "type": "tool_call",
+      "tool": "query_slots",
+      "args": {
+        "channel": "douyin",
+        "material_id": "M07",
+        "publish_time": "2026-11-03 15:00"
+      },
+      "basis": "M07 版权补查 status=valid（授权至 2027-06-30，覆盖 2026-11-03），查询 douyin 2026-11-03 15:00 是否可用",
+      "ok": true,
+      "result_summary": "douyin 2026-11-03 15:00 可用",
+      "next_action": "save_draft"
+    },
+    {
+      "step": 5,
+      "type": "model_note",
+      "text": "两个素材要求的时段均可用，无需改期。现在保存草稿。"
+    },
+    {
+      "step": 5,
+      "call": 8,
+      "type": "tool_call",
+      "tool": "save_draft",
+      "args": {
+        "entries": [
+          {
+            "material_id": "M02",
+            "decision": "schedule",
+            "suggested_slot": "2026-11-03 10:00",
+            "risk_reasons": [],
+            "pending_items": []
+          },
+          {
+            "material_id": "M07",
+            "decision": "schedule",
+            "suggested_slot": "2026-11-03 15:00",
+            "risk_reasons": [],
+            "pending_items": []
+          }
+        ]
+      },
+      "basis": "M02 规则无命中且 app_home 2026-11-03 10:00 可用；M07 版权补查 valid 且 douyin 2026-11-03 15:00 可用，两者均按请求时段排期",
+      "ok": false,
+      "result_summary": "保存失败 STORAGE_READ_ONLY（retryable=False）：草稿库当前只读，写入被拒绝；草稿未保存",
+      "next_action": "结束，输出总结"
+    }
+  ],
+  "inputs": {
+    "request": "examples/inputs/save_fail_always.json",
+    "schedule": "data/schedule.json",
+    "drafts": "examples/real-deepseek-flash/drafts/save_fail_always.drafts.json"
+  }
+}

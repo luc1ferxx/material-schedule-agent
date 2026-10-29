@@ -1,0 +1,253 @@
+{
+  "drafts": {
+    "8b5ef4c7168ce8df": {
+      "draft_id": "D-8b5ef4c7",
+      "request_key": "8b5ef4c7168ce8df",
+      "request_id": "REQ-1103-PENDING",
+      "status": "draft",
+      "version": 1,
+      "created_at": "2026-10-29T12:17:10",
+      "updated_at": "2026-10-29T12:17:10",
+      "plan_hash": "57396a4998aaf205819711d8c198d9db9b3818d21036459f59a29fca83e3aa9d",
+      "entries": [
+        {
+          "material_id": "M01",
+          "title": "秋季新品开箱",
+          "decision": "pending_confirmation",
+          "review_status": "待确认",
+          "channel": "app_home",
+          "requested_slot": "2026-11-03 18:00",
+          "time_rule": "preferred",
+          "suggested_slot": "2026-11-03 17:00",
+          "slot_changed": true,
+          "risk_reasons": [
+            "首选时段 2026-11-03 18:00 已被已有排期 S-1103-02《晚间档推荐》占用"
+          ],
+          "pending_items": [
+            "请确认是否同意改为 2026-11-03 17:00（app_home）"
+          ],
+          "risk_facts": {
+            "rule_hits": [],
+            "copyright_verified": null,
+            "missing_fields": [],
+            "request_problems": [],
+            "already_scheduled": [],
+            "blocked": false
+          },
+          "confirmations": [
+            {
+              "confirmation_id": "C-M01-98c639",
+              "question": "M01 首选时段 2026-11-03 18:00（app_home）已被已有排期 S-1103-02《晚间档推荐》占用。因 19:00 已提议给硬性要求的 M08，建议改为 2026-11-03 17:00（app_home），是否同意？",
+              "proposed_slot": "2026-11-03 17:00",
+              "status": "awaiting_user"
+            }
+          ],
+          "confirm_state": "awaiting_user_decision"
+        },
+        {
+          "material_id": "M02",
+          "title": "周末城市 vlog 合集",
+          "decision": "schedule",
+          "review_status": "审核通过，按要求时段排期",
+          "channel": "app_home",
+          "requested_slot": "2026-11-03 10:00",
+          "time_rule": "preferred",
+          "suggested_slot": "2026-11-03 10:00",
+          "slot_changed": false,
+          "risk_reasons": [],
+          "pending_items": [],
+          "risk_facts": {
+            "rule_hits": [],
+            "copyright_verified": null,
+            "missing_fields": [],
+            "request_problems": [],
+            "already_scheduled": [],
+            "blocked": false
+          },
+          "confirmations": [],
+          "confirm_state": "ready_to_confirm"
+        },
+        {
+          "material_id": "M03",
+          "title": "双十一会场海报",
+          "decision": "needs_info",
+          "review_status": "信息缺失，待补充",
+          "channel": "app_home",
+          "requested_slot": "2026-11-03 15:00",
+          "time_rule": "preferred",
+          "suggested_slot": null,
+          "slot_changed": false,
+          "risk_reasons": [
+            "缺少必填字段：image_url、copyright"
+          ],
+          "pending_items": [
+            "请补充 image_url 与版权信息"
+          ],
+          "risk_facts": {
+            "rule_hits": null,
+            "copyright_verified": null,
+            "missing_fields": [
+              "image_url",
+              "copyright"
+            ],
+            "request_problems": [],
+            "already_scheduled": [],
+            "blocked": false
+          },
+          "confirmations": [],
+          "confirm_state": "not_schedulable"
+        },
+        {
+          "material_id": "M04",
+          "title": "全网最低价！降噪耳机限时抢",
+          "decision": "pending_confirmation",
+          "review_status": "待确认",
+          "channel": "app_home",
+          "requested_slot": "2026-11-03 14:00",
+          "time_rule": "preferred",
+          "suggested_slot": "2026-11-03 14:00",
+          "slot_changed": false,
+          "risk_reasons": [
+            "文案命中广告法极限词（warn）"
+          ],
+          "pending_items": [
+            "请确认是否修改极限词文案或经法务确认后仍按 14:00 发布"
+          ],
+          "risk_facts": {
+            "rule_hits": [
+              "R-AD-01(warn)"
+            ],
+            "copyright_verified": null,
+            "missing_fields": [],
+            "request_problems": [],
+            "already_scheduled": [],
+            "blocked": false
+          },
+          "confirmations": [
+            {
+              "confirmation_id": "C-M04-d6395f",
+              "question": "M04 文案命中广告法极限词（“全网最、最低价”），属 warn 级风险，需修改文案或经法务确认后才能发布。是否仍按首选时段 2026-11-03 14:00（app_home，该时段可用）排期？",
+              "proposed_slot": null,
+              "status": "awaiting_user"
+            }
+          ],
+          "confirm_state": "awaiting_user_decision"
+        },
+        {
+          "material_id": "M05",
+          "title": "毕业季混剪",
+          "decision": "blocked",
+          "review_status": "阻断",
+          "channel": "app_home",
+          "requested_slot": "2026-11-03 16:00",
+          "time_rule": "preferred",
+          "suggested_slot": null,
+          "slot_changed": false,
+          "risk_reasons": [
+            "版权授权已过期（LIC-005 有效期至 2026-10-31，不覆盖 2026-11-03）"
+          ],
+          "pending_items": [],
+          "risk_facts": {
+            "rule_hits": [
+              "R-CP-02(verify)"
+            ],
+            "copyright_verified": "expired",
+            "missing_fields": [],
+            "request_problems": [],
+            "already_scheduled": [],
+            "blocked": true
+          },
+          "confirmations": [],
+          "confirm_state": "not_schedulable"
+        },
+        {
+          "material_id": "M07",
+          "title": "咖啡拉花教程",
+          "decision": "schedule",
+          "review_status": "审核通过，按要求时段排期",
+          "channel": "douyin",
+          "requested_slot": "2026-11-03 15:00",
+          "time_rule": "preferred",
+          "suggested_slot": "2026-11-03 15:00",
+          "slot_changed": false,
+          "risk_reasons": [],
+          "pending_items": [],
+          "risk_facts": {
+            "rule_hits": [
+              "R-CP-02(verify)"
+            ],
+            "copyright_verified": "valid",
+            "missing_fields": [],
+            "request_problems": [],
+            "already_scheduled": [],
+            "blocked": false
+          },
+          "confirmations": [],
+          "confirm_state": "ready_to_confirm"
+        },
+        {
+          "material_id": "M08",
+          "title": "新品发布会直播预热",
+          "decision": "pending_confirmation",
+          "review_status": "待确认",
+          "channel": "app_home",
+          "requested_slot": "2026-11-03 20:00",
+          "time_rule": "fixed",
+          "suggested_slot": null,
+          "slot_changed": false,
+          "risk_reasons": [
+            "硬性时段 2026-11-03 20:00 已被已有排期 S-1103-03《直播间开播提醒》占用"
+          ],
+          "pending_items": [
+            "请确认是否同意改为 2026-11-03 19:00（app_home），或另行指定/阻断"
+          ],
+          "risk_facts": {
+            "rule_hits": [],
+            "copyright_verified": null,
+            "missing_fields": [],
+            "request_problems": [],
+            "already_scheduled": [],
+            "blocked": false
+          },
+          "confirmations": [
+            {
+              "confirmation_id": "C-M08-243780",
+              "question": "M08 硬性发布时间 2026-11-03 20:00（app_home）已被已有排期 S-1103-03《直播间开播提醒》占用，无法按硬性时间发布。是否同意改为替代时段 2026-11-03 19:00？（如需其他时段或阻断请告知）",
+              "proposed_slot": "2026-11-03 19:00",
+              "status": "awaiting_user"
+            }
+          ],
+          "confirm_state": "awaiting_user_decision"
+        },
+        {
+          "material_id": "M09",
+          "title": "直播间专属优惠券",
+          "decision": "blocked",
+          "review_status": "阻断",
+          "channel": "douyin",
+          "requested_slot": "2026-11-03 16:00",
+          "time_rule": "preferred",
+          "suggested_slot": null,
+          "slot_changed": false,
+          "risk_reasons": [
+            "商业推广内容未标注广告，命中 R-AD-02 block 级规则"
+          ],
+          "pending_items": [],
+          "risk_facts": {
+            "rule_hits": [
+              "R-AD-02(block)"
+            ],
+            "copyright_verified": null,
+            "missing_fields": [],
+            "request_problems": [],
+            "already_scheduled": [],
+            "blocked": true
+          },
+          "confirmations": [],
+          "confirm_state": "not_schedulable"
+        }
+      ],
+      "history": []
+    }
+  }
+}

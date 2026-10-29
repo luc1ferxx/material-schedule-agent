@@ -1,0 +1,862 @@
+{
+  "status": "completed",
+  "status_reason": null,
+  "mode": "offline_mock",
+  "mode_notice": "离线 Mock：决策由固定规则产生，只验证流程，不代表真实模型的决策效果",
+  "request_id": "REQ-1103-PENDING",
+  "request_key": "8b5ef4c7168ce8df",
+  "scope": "pending",
+  "as_of": "2026-10-29 09:00",
+  "input_notes": [],
+  "published": false,
+  "publish_notice": "本 Agent 只生成排期草稿，没有发布能力；所有条目需用户确认后才生效",
+  "draft": {
+    "saved": true,
+    "result": "created",
+    "draft_id": "D-8b5ef4c7",
+    "version": 1,
+    "message": "草稿已创建",
+    "save_attempts": 1
+  },
+  "materials": [
+    {
+      "material_id": "M01",
+      "title": "秋季新品开箱",
+      "decision": "pending_confirmation",
+      "review_status": "待确认",
+      "channel": "app_home",
+      "requested_slot": "2026-11-03 18:00",
+      "time_rule": "preferred",
+      "suggested_slot": "2026-11-03 19:00",
+      "slot_changed": true,
+      "risk_reasons": [],
+      "pending_items": [
+        "确认改期：2026-11-03 18:00 → 2026-11-03 19:00"
+      ],
+      "risk_facts": {
+        "rule_hits": [],
+        "copyright_verified": null,
+        "missing_fields": [],
+        "request_problems": [],
+        "already_scheduled": [],
+        "blocked": false
+      },
+      "confirmations": [
+        {
+          "confirmation_id": "C-M01-671ac9",
+          "question": "M01 要求时间 2026-11-03 18:00 不可用（已被已有排期 S-1103-02《晚间档推荐》占用），建议改到 2026-11-03 19:00，是否同意？",
+          "proposed_slot": "2026-11-03 19:00",
+          "status": "awaiting_user"
+        }
+      ],
+      "confirm_state": "awaiting_user_decision",
+      "draft_status": "已写入草稿 D-8b5ef4c7",
+      "tool_facts": {
+        "found": true,
+        "missing_fields": [],
+        "already_scheduled": [],
+        "rule_hits": [],
+        "copyright_declared": "valid",
+        "copyright_verified": null,
+        "slot_available": false,
+        "slot_conflict": "已被已有排期 S-1103-02《晚间档推荐》占用",
+        "blocked": false
+      }
+    },
+    {
+      "material_id": "M02",
+      "title": "周末城市 vlog 合集",
+      "decision": "schedule",
+      "review_status": "审核通过，按要求时段排期",
+      "channel": "app_home",
+      "requested_slot": "2026-11-03 10:00",
+      "time_rule": "preferred",
+      "suggested_slot": "2026-11-03 10:00",
+      "slot_changed": false,
+      "risk_reasons": [],
+      "pending_items": [],
+      "risk_facts": {
+        "rule_hits": [],
+        "copyright_verified": null,
+        "missing_fields": [],
+        "request_problems": [],
+        "already_scheduled": [],
+        "blocked": false
+      },
+      "confirmations": [],
+      "confirm_state": "ready_to_confirm",
+      "draft_status": "已写入草稿 D-8b5ef4c7",
+      "tool_facts": {
+        "found": true,
+        "missing_fields": [],
+        "already_scheduled": [],
+        "rule_hits": [],
+        "copyright_declared": "valid",
+        "copyright_verified": null,
+        "slot_available": true,
+        "slot_conflict": null,
+        "blocked": false
+      }
+    },
+    {
+      "material_id": "M03",
+      "title": "双十一会场海报",
+      "decision": "needs_info",
+      "review_status": "信息缺失，待补充",
+      "channel": "app_home",
+      "requested_slot": "2026-11-03 15:00",
+      "time_rule": "preferred",
+      "suggested_slot": null,
+      "slot_changed": false,
+      "risk_reasons": [],
+      "pending_items": [
+        "请补充素材字段：image_url、copyright"
+      ],
+      "risk_facts": {
+        "rule_hits": null,
+        "copyright_verified": null,
+        "missing_fields": [
+          "image_url",
+          "copyright"
+        ],
+        "request_problems": [],
+        "already_scheduled": [],
+        "blocked": false
+      },
+      "confirmations": [],
+      "confirm_state": "not_schedulable",
+      "draft_status": "已写入草稿 D-8b5ef4c7",
+      "tool_facts": {
+        "found": true,
+        "missing_fields": [
+          "image_url",
+          "copyright"
+        ],
+        "already_scheduled": [],
+        "rule_hits": null,
+        "copyright_declared": null,
+        "copyright_verified": null,
+        "slot_available": null,
+        "slot_conflict": null,
+        "blocked": false
+      }
+    },
+    {
+      "material_id": "M04",
+      "title": "全网最低价！降噪耳机限时抢",
+      "decision": "pending_confirmation",
+      "review_status": "待确认",
+      "channel": "app_home",
+      "requested_slot": "2026-11-03 14:00",
+      "time_rule": "preferred",
+      "suggested_slot": "2026-11-03 14:00",
+      "slot_changed": false,
+      "risk_reasons": [
+        "R-AD-01：文案含广告法极限词，需修改文案或经法务确认后发布（命中关键词：全网最、最低价）"
+      ],
+      "pending_items": [
+        "确认风险处理：文案含广告法极限词，需修改文案或经法务确认后发布"
+      ],
+      "risk_facts": {
+        "rule_hits": [
+          "R-AD-01(warn)"
+        ],
+        "copyright_verified": null,
+        "missing_fields": [],
+        "request_problems": [],
+        "already_scheduled": [],
+        "blocked": false
+      },
+      "confirmations": [
+        {
+          "confirmation_id": "C-M04-d6395f",
+          "question": "M04 命中 warn 级规则：文案含广告法极限词，需修改文案或经法务确认后发布。是否修改后按计划发布？",
+          "proposed_slot": null,
+          "status": "awaiting_user"
+        }
+      ],
+      "confirm_state": "awaiting_user_decision",
+      "draft_status": "已写入草稿 D-8b5ef4c7",
+      "tool_facts": {
+        "found": true,
+        "missing_fields": [],
+        "already_scheduled": [],
+        "rule_hits": [
+          "R-AD-01(warn)"
+        ],
+        "copyright_declared": "valid",
+        "copyright_verified": null,
+        "slot_available": true,
+        "slot_conflict": null,
+        "blocked": false
+      }
+    },
+    {
+      "material_id": "M05",
+      "title": "毕业季混剪",
+      "decision": "blocked",
+      "review_status": "阻断",
+      "channel": "app_home",
+      "requested_slot": "2026-11-03 16:00",
+      "time_rule": "preferred",
+      "suggested_slot": null,
+      "slot_changed": false,
+      "risk_reasons": [
+        "版权失效：授权有效期至 2026-10-31，不覆盖发布日期 2026-11-03，视为失效"
+      ],
+      "pending_items": [],
+      "risk_facts": {
+        "rule_hits": [
+          "R-CP-02(verify)"
+        ],
+        "copyright_verified": "expired",
+        "missing_fields": [],
+        "request_problems": [],
+        "already_scheduled": [],
+        "blocked": true
+      },
+      "confirmations": [],
+      "confirm_state": "not_schedulable",
+      "draft_status": "已写入草稿 D-8b5ef4c7",
+      "tool_facts": {
+        "found": true,
+        "missing_fields": [],
+        "already_scheduled": [],
+        "rule_hits": [
+          "R-CP-02(verify)"
+        ],
+        "copyright_declared": "pending",
+        "copyright_verified": "expired",
+        "slot_available": null,
+        "slot_conflict": null,
+        "blocked": true
+      }
+    },
+    {
+      "material_id": "M07",
+      "title": "咖啡拉花教程",
+      "decision": "schedule",
+      "review_status": "审核通过，按要求时段排期",
+      "channel": "douyin",
+      "requested_slot": "2026-11-03 15:00",
+      "time_rule": "preferred",
+      "suggested_slot": "2026-11-03 15:00",
+      "slot_changed": false,
+      "risk_reasons": [],
+      "pending_items": [],
+      "risk_facts": {
+        "rule_hits": [
+          "R-CP-02(verify)"
+        ],
+        "copyright_verified": "valid",
+        "missing_fields": [],
+        "request_problems": [],
+        "already_scheduled": [],
+        "blocked": false
+      },
+      "confirmations": [],
+      "confirm_state": "ready_to_confirm",
+      "draft_status": "已写入草稿 D-8b5ef4c7",
+      "tool_facts": {
+        "found": true,
+        "missing_fields": [],
+        "already_scheduled": [],
+        "rule_hits": [
+          "R-CP-02(verify)"
+        ],
+        "copyright_declared": "pending",
+        "copyright_verified": "valid",
+        "slot_available": true,
+        "slot_conflict": null,
+        "blocked": false
+      }
+    },
+    {
+      "material_id": "M08",
+      "title": "新品发布会直播预热",
+      "decision": "pending_confirmation",
+      "review_status": "待确认",
+      "channel": "app_home",
+      "requested_slot": "2026-11-03 20:00",
+      "time_rule": "fixed",
+      "suggested_slot": null,
+      "slot_changed": false,
+      "risk_reasons": [],
+      "pending_items": [
+        "硬性时间 2026-11-03 20:00 不可用，需你决定：协调占用方或改到 2026-11-03 22:00"
+      ],
+      "risk_facts": {
+        "rule_hits": [],
+        "copyright_verified": null,
+        "missing_fields": [],
+        "request_problems": [],
+        "already_scheduled": [],
+        "blocked": false
+      },
+      "confirmations": [
+        {
+          "confirmation_id": "C-M08-832143",
+          "question": "M08 的硬性发布时间 2026-11-03 20:00 不可用（已被已有排期 S-1103-03《直播间开播提醒》占用）。未经你同意不会改期：请决定协调占用方让出该时段，还是改到 2026-11-03 22:00？",
+          "proposed_slot": "2026-11-03 22:00",
+          "status": "awaiting_user"
+        }
+      ],
+      "confirm_state": "awaiting_user_decision",
+      "draft_status": "已写入草稿 D-8b5ef4c7",
+      "tool_facts": {
+        "found": true,
+        "missing_fields": [],
+        "already_scheduled": [],
+        "rule_hits": [],
+        "copyright_declared": "valid",
+        "copyright_verified": null,
+        "slot_available": false,
+        "slot_conflict": "已被已有排期 S-1103-03《直播间开播提醒》占用",
+        "blocked": false
+      }
+    },
+    {
+      "material_id": "M09",
+      "title": "直播间专属优惠券",
+      "decision": "blocked",
+      "review_status": "阻断",
+      "channel": "douyin",
+      "requested_slot": "2026-11-03 16:00",
+      "time_rule": "preferred",
+      "suggested_slot": null,
+      "slot_changed": false,
+      "risk_reasons": [
+        "R-AD-02：商业推广内容未标注“广告”，不得发布（命中标记：{\"is_commercial\": true, \"ad_label\": false}）"
+      ],
+      "pending_items": [],
+      "risk_facts": {
+        "rule_hits": [
+          "R-AD-02(block)"
+        ],
+        "copyright_verified": null,
+        "missing_fields": [],
+        "request_problems": [],
+        "already_scheduled": [],
+        "blocked": true
+      },
+      "confirmations": [],
+      "confirm_state": "not_schedulable",
+      "draft_status": "已写入草稿 D-8b5ef4c7",
+      "tool_facts": {
+        "found": true,
+        "missing_fields": [],
+        "already_scheduled": [],
+        "rule_hits": [
+          "R-AD-02(block)"
+        ],
+        "copyright_declared": "valid",
+        "copyright_verified": null,
+        "slot_available": null,
+        "slot_conflict": null,
+        "blocked": true
+      }
+    }
+  ],
+  "pending_confirmations": [
+    {
+      "material_id": "M01",
+      "confirmation_id": "C-M01-671ac9",
+      "question": "M01 要求时间 2026-11-03 18:00 不可用（已被已有排期 S-1103-02《晚间档推荐》占用），建议改到 2026-11-03 19:00，是否同意？",
+      "proposed_slot": "2026-11-03 19:00",
+      "status": "awaiting_user"
+    },
+    {
+      "material_id": "M04",
+      "confirmation_id": "C-M04-d6395f",
+      "question": "M04 命中 warn 级规则：文案含广告法极限词，需修改文案或经法务确认后发布。是否修改后按计划发布？",
+      "proposed_slot": null,
+      "status": "awaiting_user"
+    },
+    {
+      "material_id": "M08",
+      "confirmation_id": "C-M08-832143",
+      "question": "M08 的硬性发布时间 2026-11-03 20:00 不可用（已被已有排期 S-1103-03《直播间开播提醒》占用）。未经你同意不会改期：请决定协调占用方让出该时段，还是改到 2026-11-03 22:00？",
+      "proposed_slot": "2026-11-03 22:00",
+      "status": "awaiting_user"
+    }
+  ],
+  "guard_flags": [],
+  "model_summary": "【离线 Mock】处理结果：\n- M01：待确认，建议时段 2026-11-03 19:00；待确认/补充：确认改期：2026-11-03 18:00 → 2026-11-03 19:00\n- M02：审核通过，按要求时段排期，建议时段 2026-11-03 10:00\n- M03：信息缺失，待补充，建议时段 无；待确认/补充：请补充素材字段：image_url、copyright\n- M04：待确认，建议时段 2026-11-03 14:00；待确认/补充：确认风险处理：文案含广告法极限词，需修改文案或经法务确认后发布\n- M05：阻断，建议时段 无\n- M07：审核通过，按要求时段排期，建议时段 2026-11-03 15:00\n- M08：待确认，建议时段 无；待确认/补充：硬性时间 2026-11-03 20:00 不可用，需你决定：协调占用方或改到 2026-11-03 22:00\n- M09：阻断，建议时段 无\n草稿保存结果：created（D-8b5ef4c7 v1）。仅为草稿，需你确认，未做任何发布。",
+  "usage": {
+    "steps": 30,
+    "tool_calls": 29,
+    "max_steps": 40,
+    "max_tool_calls": 80
+  },
+  "trace": [
+    {
+      "step": 1,
+      "call": 1,
+      "type": "tool_call",
+      "tool": "list_pending_materials",
+      "args": {},
+      "basis": "请求未列出素材，先找出所有待审核素材",
+      "ok": true,
+      "result_summary": "待审核素材 8 个：M01、M02、M03、M04、M05、M07、M08、M09；已加入待处理清单 8 个",
+      "next_action": "get_material(M01)"
+    },
+    {
+      "step": 2,
+      "call": 2,
+      "type": "tool_call",
+      "tool": "get_material",
+      "args": {
+        "material_id": "M01"
+      },
+      "basis": "读取 M01 元数据，确认信息是否完整",
+      "ok": true,
+      "result_summary": "《秋季新品开箱》；必填字段齐全；版权声明状态 valid（未核验）",
+      "next_action": "check_rules(M01)"
+    },
+    {
+      "step": 3,
+      "call": 3,
+      "type": "tool_call",
+      "tool": "check_rules",
+      "args": {
+        "material_id": "M01"
+      },
+      "basis": "M01 信息齐全，按审核规则检查",
+      "ok": true,
+      "result_summary": "无规则风险",
+      "next_action": "query_slots(M01)"
+    },
+    {
+      "step": 4,
+      "call": 4,
+      "type": "tool_call",
+      "tool": "query_slots",
+      "args": {
+        "material_id": "M01",
+        "channel": "app_home",
+        "publish_time": "2026-11-03 18:00"
+      },
+      "basis": "M01 审核无阻断风险，查询要求时段 2026-11-03 18:00 是否可用",
+      "ok": true,
+      "result_summary": "app_home 2026-11-03 18:00 不可用（已被已有排期 S-1103-02《晚间档推荐》占用）；替代时段 ['2026-11-03 19:00', '2026-11-03 17:00', '2026-11-03 22:00']",
+      "next_action": "request_confirmation(M01)"
+    },
+    {
+      "step": 5,
+      "call": 5,
+      "type": "tool_call",
+      "tool": "request_confirmation",
+      "args": {
+        "material_id": "M01",
+        "question": "M01 要求时间 2026-11-03 18:00 不可用（已被已有排期 S-1103-02《晚间档推荐》占用），建议改到 2026-11-03 19:00，是否同意？",
+        "proposed_slot": "2026-11-03 19:00"
+      },
+      "basis": "要求时段不可用，2026-11-03 19:00 可用，改期需用户确认",
+      "ok": true,
+      "result_summary": "已登记待确认 C-M01-671ac9，本次请求内暂留 2026-11-03 19:00（未写入排期）；用户尚未确认",
+      "next_action": "get_material(M02)"
+    },
+    {
+      "step": 6,
+      "call": 6,
+      "type": "tool_call",
+      "tool": "get_material",
+      "args": {
+        "material_id": "M02"
+      },
+      "basis": "读取 M02 元数据，确认信息是否完整",
+      "ok": true,
+      "result_summary": "《周末城市 vlog 合集》；必填字段齐全；版权声明状态 valid（未核验）",
+      "next_action": "check_rules(M02)"
+    },
+    {
+      "step": 7,
+      "call": 7,
+      "type": "tool_call",
+      "tool": "check_rules",
+      "args": {
+        "material_id": "M02"
+      },
+      "basis": "M02 信息齐全，按审核规则检查",
+      "ok": true,
+      "result_summary": "无规则风险",
+      "next_action": "query_slots(M02)"
+    },
+    {
+      "step": 8,
+      "call": 8,
+      "type": "tool_call",
+      "tool": "query_slots",
+      "args": {
+        "material_id": "M02",
+        "channel": "app_home",
+        "publish_time": "2026-11-03 10:00"
+      },
+      "basis": "M02 审核无阻断风险，查询要求时段 2026-11-03 10:00 是否可用",
+      "ok": true,
+      "result_summary": "app_home 2026-11-03 10:00 可用",
+      "next_action": "get_material(M03)"
+    },
+    {
+      "step": 9,
+      "call": 9,
+      "type": "tool_call",
+      "tool": "get_material",
+      "args": {
+        "material_id": "M03"
+      },
+      "basis": "读取 M03 元数据，确认信息是否完整",
+      "ok": true,
+      "result_summary": "《双十一会场海报》；缺失必填字段 ['image_url', 'copyright']；版权声明状态 无（未核验）",
+      "next_action": "get_material(M04)"
+    },
+    {
+      "step": 10,
+      "call": 10,
+      "type": "tool_call",
+      "tool": "get_material",
+      "args": {
+        "material_id": "M04"
+      },
+      "basis": "读取 M04 元数据，确认信息是否完整",
+      "ok": true,
+      "result_summary": "《全网最低价！降噪耳机限时抢》；必填字段齐全；版权声明状态 valid（未核验）",
+      "next_action": "check_rules(M04)"
+    },
+    {
+      "step": 11,
+      "call": 11,
+      "type": "tool_call",
+      "tool": "check_rules",
+      "args": {
+        "material_id": "M04"
+      },
+      "basis": "M04 信息齐全，按审核规则检查",
+      "ok": true,
+      "result_summary": "命中 R-AD-01(warn)",
+      "next_action": "query_slots(M04)"
+    },
+    {
+      "step": 12,
+      "call": 12,
+      "type": "tool_call",
+      "tool": "query_slots",
+      "args": {
+        "material_id": "M04",
+        "channel": "app_home",
+        "publish_time": "2026-11-03 14:00"
+      },
+      "basis": "M04 审核无阻断风险，查询要求时段 2026-11-03 14:00 是否可用",
+      "ok": true,
+      "result_summary": "app_home 2026-11-03 14:00 可用",
+      "next_action": "request_confirmation(M04)"
+    },
+    {
+      "step": 13,
+      "call": 13,
+      "type": "tool_call",
+      "tool": "request_confirmation",
+      "args": {
+        "material_id": "M04",
+        "question": "M04 命中 warn 级规则：文案含广告法极限词，需修改文案或经法务确认后发布。是否修改后按计划发布？",
+        "proposed_slot": ""
+      },
+      "basis": "M04 命中 warn 级规则，需要用户决定",
+      "ok": true,
+      "result_summary": "已登记待确认 C-M04-d6395f；用户尚未确认",
+      "next_action": "get_material(M05)"
+    },
+    {
+      "step": 14,
+      "call": 14,
+      "type": "tool_call",
+      "tool": "get_material",
+      "args": {
+        "material_id": "M05"
+      },
+      "basis": "读取 M05 元数据，确认信息是否完整",
+      "ok": true,
+      "result_summary": "《毕业季混剪》；必填字段齐全；版权声明状态 pending（未核验）",
+      "next_action": "check_rules(M05)"
+    },
+    {
+      "step": 15,
+      "call": 15,
+      "type": "tool_call",
+      "tool": "check_rules",
+      "args": {
+        "material_id": "M05"
+      },
+      "basis": "M05 信息齐全，按审核规则检查",
+      "ok": true,
+      "result_summary": "命中 R-CP-02(verify)",
+      "next_action": "verify_copyright(M05)"
+    },
+    {
+      "step": 16,
+      "call": 16,
+      "type": "tool_call",
+      "tool": "verify_copyright",
+      "args": {
+        "material_id": "M05"
+      },
+      "basis": "M05 版权状态待核验，补查授权",
+      "ok": true,
+      "result_summary": "版权 expired：授权有效期至 2026-10-31，不覆盖发布日期 2026-11-03，视为失效",
+      "next_action": "block_material(M05)"
+    },
+    {
+      "step": 17,
+      "call": 17,
+      "type": "tool_call",
+      "tool": "block_material",
+      "args": {
+        "material_id": "M05",
+        "risk_summary": "版权失效：授权有效期至 2026-10-31，不覆盖发布日期 2026-11-03，视为失效"
+      },
+      "basis": "补查结果为 expired，不能发布",
+      "ok": true,
+      "result_summary": "已阻断 M05：版权失效：授权有效期至 2026-10-31，不覆盖发布日期 2026-11-03，视为失效",
+      "next_action": "get_material(M07)"
+    },
+    {
+      "step": 18,
+      "call": 18,
+      "type": "tool_call",
+      "tool": "get_material",
+      "args": {
+        "material_id": "M07"
+      },
+      "basis": "读取 M07 元数据，确认信息是否完整",
+      "ok": true,
+      "result_summary": "《咖啡拉花教程》；必填字段齐全；版权声明状态 pending（未核验）",
+      "next_action": "check_rules(M07)"
+    },
+    {
+      "step": 19,
+      "call": 19,
+      "type": "tool_call",
+      "tool": "check_rules",
+      "args": {
+        "material_id": "M07"
+      },
+      "basis": "M07 信息齐全，按审核规则检查",
+      "ok": true,
+      "result_summary": "命中 R-CP-02(verify)",
+      "next_action": "verify_copyright(M07)"
+    },
+    {
+      "step": 20,
+      "call": 20,
+      "type": "tool_call",
+      "tool": "verify_copyright",
+      "args": {
+        "material_id": "M07"
+      },
+      "basis": "M07 版权状态待核验，补查授权",
+      "ok": true,
+      "result_summary": "版权 valid：授权有效至 2027-06-30，覆盖发布日期 2026-11-03",
+      "next_action": "query_slots(M07)"
+    },
+    {
+      "step": 21,
+      "call": 21,
+      "type": "tool_call",
+      "tool": "query_slots",
+      "args": {
+        "material_id": "M07",
+        "channel": "douyin",
+        "publish_time": "2026-11-03 15:00"
+      },
+      "basis": "M07 审核无阻断风险，查询要求时段 2026-11-03 15:00 是否可用",
+      "ok": true,
+      "result_summary": "douyin 2026-11-03 15:00 可用",
+      "next_action": "get_material(M08)"
+    },
+    {
+      "step": 22,
+      "call": 22,
+      "type": "tool_call",
+      "tool": "get_material",
+      "args": {
+        "material_id": "M08"
+      },
+      "basis": "读取 M08 元数据，确认信息是否完整",
+      "ok": true,
+      "result_summary": "《新品发布会直播预热》；必填字段齐全；版权声明状态 valid（未核验）",
+      "next_action": "check_rules(M08)"
+    },
+    {
+      "step": 23,
+      "call": 23,
+      "type": "tool_call",
+      "tool": "check_rules",
+      "args": {
+        "material_id": "M08"
+      },
+      "basis": "M08 信息齐全，按审核规则检查",
+      "ok": true,
+      "result_summary": "无规则风险",
+      "next_action": "query_slots(M08)"
+    },
+    {
+      "step": 24,
+      "call": 24,
+      "type": "tool_call",
+      "tool": "query_slots",
+      "args": {
+        "material_id": "M08",
+        "channel": "app_home",
+        "publish_time": "2026-11-03 20:00"
+      },
+      "basis": "M08 审核无阻断风险，查询要求时段 2026-11-03 20:00 是否可用",
+      "ok": true,
+      "result_summary": "app_home 2026-11-03 20:00 不可用（已被已有排期 S-1103-03《直播间开播提醒》占用）；更近的时段也不可用：21:00（已被已有排期 S-1103-04《品牌故事》占用），19:00（已提议给本次请求中的 M01）；替代时段 ['2026-11-03 22:00', '2026-11-03 17:00', '2026-11-03 16:00']",
+      "next_action": "request_confirmation(M08)"
+    },
+    {
+      "step": 25,
+      "call": 25,
+      "type": "tool_call",
+      "tool": "request_confirmation",
+      "args": {
+        "material_id": "M08",
+        "question": "M08 的硬性发布时间 2026-11-03 20:00 不可用（已被已有排期 S-1103-03《直播间开播提醒》占用）。未经你同意不会改期：请决定协调占用方让出该时段，还是改到 2026-11-03 22:00？",
+        "proposed_slot": "2026-11-03 22:00"
+      },
+      "basis": "硬性时间被占用，不能擅自改期，需用户决定",
+      "ok": true,
+      "result_summary": "已登记待确认 C-M08-832143，本次请求内暂留 2026-11-03 22:00（未写入排期）；用户尚未确认",
+      "next_action": "get_material(M09)"
+    },
+    {
+      "step": 26,
+      "call": 26,
+      "type": "tool_call",
+      "tool": "get_material",
+      "args": {
+        "material_id": "M09"
+      },
+      "basis": "读取 M09 元数据，确认信息是否完整",
+      "ok": true,
+      "result_summary": "《直播间专属优惠券》；必填字段齐全；版权声明状态 valid（未核验）",
+      "next_action": "check_rules(M09)"
+    },
+    {
+      "step": 27,
+      "call": 27,
+      "type": "tool_call",
+      "tool": "check_rules",
+      "args": {
+        "material_id": "M09"
+      },
+      "basis": "M09 信息齐全，按审核规则检查",
+      "ok": true,
+      "result_summary": "命中 R-AD-02(block)",
+      "next_action": "block_material(M09)"
+    },
+    {
+      "step": 28,
+      "call": 28,
+      "type": "tool_call",
+      "tool": "block_material",
+      "args": {
+        "material_id": "M09",
+        "risk_summary": "商业推广内容未标注“广告”，不得发布"
+      },
+      "basis": "M09 命中 block 级规则",
+      "ok": true,
+      "result_summary": "已阻断 M09：商业推广内容未标注“广告”，不得发布",
+      "next_action": "save_draft"
+    },
+    {
+      "step": 29,
+      "call": 29,
+      "type": "tool_call",
+      "tool": "save_draft",
+      "args": {
+        "entries": [
+          {
+            "material_id": "M01",
+            "decision": "pending_confirmation",
+            "suggested_slot": "2026-11-03 19:00",
+            "risk_reasons": [],
+            "pending_items": [
+              "确认改期：2026-11-03 18:00 → 2026-11-03 19:00"
+            ]
+          },
+          {
+            "material_id": "M02",
+            "decision": "schedule",
+            "suggested_slot": "2026-11-03 10:00",
+            "risk_reasons": [],
+            "pending_items": []
+          },
+          {
+            "material_id": "M03",
+            "decision": "needs_info",
+            "suggested_slot": "",
+            "risk_reasons": [],
+            "pending_items": [
+              "请补充素材字段：image_url、copyright"
+            ]
+          },
+          {
+            "material_id": "M04",
+            "decision": "pending_confirmation",
+            "suggested_slot": "2026-11-03 14:00",
+            "risk_reasons": [
+              "R-AD-01：文案含广告法极限词，需修改文案或经法务确认后发布（命中关键词：全网最、最低价）"
+            ],
+            "pending_items": [
+              "确认风险处理：文案含广告法极限词，需修改文案或经法务确认后发布"
+            ]
+          },
+          {
+            "material_id": "M05",
+            "decision": "blocked",
+            "suggested_slot": "",
+            "risk_reasons": [
+              "版权失效：授权有效期至 2026-10-31，不覆盖发布日期 2026-11-03，视为失效"
+            ],
+            "pending_items": []
+          },
+          {
+            "material_id": "M07",
+            "decision": "schedule",
+            "suggested_slot": "2026-11-03 15:00",
+            "risk_reasons": [],
+            "pending_items": []
+          },
+          {
+            "material_id": "M08",
+            "decision": "pending_confirmation",
+            "suggested_slot": "",
+            "risk_reasons": [],
+            "pending_items": [
+              "硬性时间 2026-11-03 20:00 不可用，需你决定：协调占用方或改到 2026-11-03 22:00"
+            ]
+          },
+          {
+            "material_id": "M09",
+            "decision": "blocked",
+            "suggested_slot": "",
+            "risk_reasons": [
+              "R-AD-02：商业推广内容未标注“广告”，不得发布（命中标记：{\"is_commercial\": true, \"ad_label\": false}）"
+            ],
+            "pending_items": []
+          }
+        ]
+      },
+      "basis": "全部素材已处理，提交排期草稿",
+      "ok": true,
+      "result_summary": "created：D-8b5ef4c7 v1（草稿已创建）",
+      "next_action": "结束，输出总结"
+    }
+  ],
+  "inputs": {
+    "request": "examples/inputs/pending_scope.json",
+    "schedule": "data/schedule.json",
+    "drafts": "examples/drafts/pending_scope.drafts.json"
+  }
+}

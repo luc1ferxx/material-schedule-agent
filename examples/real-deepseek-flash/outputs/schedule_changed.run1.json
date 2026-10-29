@@ -1,0 +1,201 @@
+{
+  "status": "completed",
+  "status_reason": null,
+  "mode": "openai-compatible:deepseek-flash",
+  "mode_notice": null,
+  "request_id": "REQ-1103-CONFLICT",
+  "request_key": "98939b91f9cb3755",
+  "scope": "items",
+  "as_of": "2026-10-29 09:00",
+  "input_notes": [],
+  "published": false,
+  "publish_notice": "本 Agent 只生成排期草稿，没有发布能力；所有条目需用户确认后才生效",
+  "draft": {
+    "saved": true,
+    "result": "created",
+    "draft_id": "D-98939b91",
+    "version": 1,
+    "message": "草稿已创建",
+    "save_attempts": 1
+  },
+  "materials": [
+    {
+      "material_id": "M01",
+      "title": "秋季新品开箱",
+      "decision": "pending_confirmation",
+      "review_status": "待确认",
+      "channel": "app_home",
+      "requested_slot": "2026-11-03 18:00",
+      "time_rule": "preferred",
+      "suggested_slot": "2026-11-03 19:00",
+      "slot_changed": true,
+      "risk_reasons": [
+        "期望时段 app_home 2026-11-03 18:00 已被已有排期 S-1103-02《晚间档推荐》占用，不可用",
+        "preferred 时间可改期，已登记确认（C-M01-5c2294），建议改到 2026-11-03 19:00"
+      ],
+      "pending_items": [
+        "是否同意 M01 从 2026-11-03 18:00 改到 2026-11-03 19:00（app_home）；不同意可指定 17:00、16:00 或其他时段"
+      ],
+      "risk_facts": {
+        "rule_hits": [],
+        "copyright_verified": null,
+        "missing_fields": [],
+        "request_problems": [],
+        "already_scheduled": [],
+        "blocked": false
+      },
+      "confirmations": [
+        {
+          "confirmation_id": "C-M01-5c2294",
+          "question": "M01《秋季新品开箱》期望的 app_home 2026-11-03 18:00 已被已有排期 S-1103-02《晚间档推荐》占用，18:00 不可用。按接近程度排序的可用替代时段为 2026-11-03 19:00、17:00、16:00，建议改到 2026-11-03 19:00（同等接近时优先晚于要求时间）。是否同意改用 19:00？如不同意请指定其他时段。",
+          "proposed_slot": "2026-11-03 19:00",
+          "status": "awaiting_user"
+        }
+      ],
+      "confirm_state": "awaiting_user_decision",
+      "draft_status": "已写入草稿 D-98939b91",
+      "tool_facts": {
+        "found": true,
+        "missing_fields": [],
+        "already_scheduled": [],
+        "rule_hits": [],
+        "copyright_declared": "valid",
+        "copyright_verified": null,
+        "slot_available": false,
+        "slot_conflict": "已被已有排期 S-1103-02《晚间档推荐》占用",
+        "blocked": false
+      }
+    }
+  ],
+  "pending_confirmations": [
+    {
+      "material_id": "M01",
+      "confirmation_id": "C-M01-5c2294",
+      "question": "M01《秋季新品开箱》期望的 app_home 2026-11-03 18:00 已被已有排期 S-1103-02《晚间档推荐》占用，18:00 不可用。按接近程度排序的可用替代时段为 2026-11-03 19:00、17:00、16:00，建议改到 2026-11-03 19:00（同等接近时优先晚于要求时间）。是否同意改用 19:00？如不同意请指定其他时段。",
+      "proposed_slot": "2026-11-03 19:00",
+      "status": "awaiting_user"
+    }
+  ],
+  "guard_flags": [],
+  "model_summary": "已处理完成，本次只有 1 个素材（M01）。\n\n**M01《秋季新品开箱》（video，运营-阿青）**\n- 元数据完整，无缺失字段，不在已有排期中；审核规则检查无命中（highest_level=none）；版权登记状态 valid。\n- 期望时段：app_home 2026-11-03 18:00（time_rule=preferred）。\n- 冲突：query_slots 返回 18:00 **不可用**，已被已有排期 S-1103-02《晚间档推荐》占用。按接近程度排序的可用替代时段为 19:00、17:00、16:00。\n- 结论：**pending_confirmation**，建议时段 **2026-11-03 19:00**（同等接近时优先晚于要求时间的那个）。\n\n**待用户确认（确认编号 C-M01-5c2294，状态 awaiting_user）**\n- 是否同意 M01 从 2026-11-03 18:00 改到 2026-11-03 19:00；若不同意，可指定 17:00、16:00 或其他时段。\n- 说明：该提议时段仅在本次请求内暂留，**尚未写入正式排期，也未锁定**；需你确认后才生效。\n\n**草稿保存结果**\n- 保存成功：`draft_id = D-98939b91`（version 1，result=created）。\n- 草稿仅包含 M01 一条，decision=pending_confirmation，suggested_slot=2026-11-03 19:00。这只是草稿，未发布、未上线，需你确认后才生效。",
+  "usage": {
+    "steps": 6,
+    "tool_calls": 5,
+    "max_steps": 40,
+    "max_tool_calls": 80
+  },
+  "trace": [
+    {
+      "step": 1,
+      "type": "model_note",
+      "text": "我会先读取 M01 的元数据，检查它是否存在、必填字段和发布要求。"
+    },
+    {
+      "step": 1,
+      "call": 1,
+      "type": "tool_call",
+      "tool": "get_material",
+      "args": {
+        "material_id": "M01"
+      },
+      "basis": "请求列出 M01（app_home 2026-11-03 18:00，preferred），先读取素材元数据确认是否可处理",
+      "ok": true,
+      "result_summary": "《秋季新品开箱》；必填字段齐全；版权声明状态 valid（未核验）",
+      "next_action": "check_rules(M01)"
+    },
+    {
+      "step": 2,
+      "type": "model_note",
+      "text": "M01 元数据完整、未在排期中，继续检查审核规则。"
+    },
+    {
+      "step": 2,
+      "call": 2,
+      "type": "tool_call",
+      "tool": "check_rules",
+      "args": {
+        "material_id": "M01"
+      },
+      "basis": "M01 元数据完整、无重复排期，下一步按规则检查是否有 block/warn/verify 命中",
+      "ok": true,
+      "result_summary": "无规则风险",
+      "next_action": "query_slots(M01)"
+    },
+    {
+      "step": 3,
+      "type": "model_note",
+      "text": "规则检查无命中，查询 app_home 在 2026-11-03 18:00 是否可用。"
+    },
+    {
+      "step": 3,
+      "call": 3,
+      "type": "tool_call",
+      "tool": "query_slots",
+      "args": {
+        "material_id": "M01",
+        "channel": "app_home",
+        "publish_time": "2026-11-03 18:00"
+      },
+      "basis": "M01 规则检查无风险（highest_level=none），查询其期望时段 app_home 2026-11-03 18:00 是否可用",
+      "ok": true,
+      "result_summary": "app_home 2026-11-03 18:00 不可用（已被已有排期 S-1103-02《晚间档推荐》占用）；替代时段 ['2026-11-03 19:00', '2026-11-03 17:00', '2026-11-03 16:00']",
+      "next_action": "request_confirmation(M01)"
+    },
+    {
+      "step": 4,
+      "type": "model_note",
+      "text": "期望时段 18:00 已被 S-1103-02 占用，最近替代时段为 19:00；因属 preferred 时间，需先登记用户确认。"
+    },
+    {
+      "step": 4,
+      "call": 4,
+      "type": "tool_call",
+      "tool": "request_confirmation",
+      "args": {
+        "material_id": "M01",
+        "question": "M01《秋季新品开箱》期望的 app_home 2026-11-03 18:00 已被已有排期 S-1103-02《晚间档推荐》占用，18:00 不可用。按接近程度排序的可用替代时段为 2026-11-03 19:00、17:00、16:00，建议改到 2026-11-03 19:00（同等接近时优先晚于要求时间）。是否同意改用 19:00？如不同意请指定其他时段。",
+        "proposed_slot": "2026-11-03 19:00"
+      },
+      "basis": "query_slots 返回 M01 的 18:00 被 S-1103-02 占用，替代时段首选 2026-11-03 19:00，按 preferred 规则需先登记确认",
+      "ok": true,
+      "result_summary": "已登记待确认 C-M01-5c2294，本次请求内暂留 2026-11-03 19:00（未写入排期）；用户尚未确认",
+      "next_action": "save_draft"
+    },
+    {
+      "step": 5,
+      "type": "model_note",
+      "text": "确认事项已登记，现在保存排期草稿。"
+    },
+    {
+      "step": 5,
+      "call": 5,
+      "type": "tool_call",
+      "tool": "save_draft",
+      "args": {
+        "entries": [
+          {
+            "material_id": "M01",
+            "decision": "pending_confirmation",
+            "suggested_slot": "2026-11-03 19:00",
+            "risk_reasons": [
+              "期望时段 app_home 2026-11-03 18:00 已被已有排期 S-1103-02《晚间档推荐》占用，不可用",
+              "preferred 时间可改期，已登记确认（C-M01-5c2294），建议改到 2026-11-03 19:00"
+            ],
+            "pending_items": [
+              "是否同意 M01 从 2026-11-03 18:00 改到 2026-11-03 19:00（app_home）；不同意可指定 17:00、16:00 或其他时段"
+            ]
+          }
+        ]
+      },
+      "basis": "M01 规则无风险但期望时段被占用，已登记替代时段确认（C-M01-5c2294），按 pending_confirmation 提交草稿",
+      "ok": true,
+      "result_summary": "created：D-98939b91 v1（草稿已创建）",
+      "next_action": "结束，输出总结"
+    }
+  ],
+  "inputs": {
+    "request": "examples/inputs/slot_conflict.json",
+    "schedule": "data/schedule.json",
+    "drafts": "examples/real-deepseek-flash/drafts/schedule_changed.drafts.json"
+  }
+}

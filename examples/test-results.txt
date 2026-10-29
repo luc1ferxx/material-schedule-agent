@@ -1,0 +1,90 @@
+Command: python -m unittest discover -s tests -v
+Environment: 3.12.1 Windows-11-10.0.26200-SP0ï¼›å¦åœ¨ Python 3.10.0 ä¸Šè¿è¡ŒåŒæ ·å…¨éƒ¨é€šè¿‡
+Date: 2026-10-29 12:40
+
+test_blocking_after_save_marks_draft_stale (test_agent_loop.AgentLoopTest.test_blocking_after_save_marks_draft_stale) ... ok
+test_claim_detection_respects_negation (test_agent_loop.AgentLoopTest.test_claim_detection_respects_negation)
+ÕæÊµÄ£ĞÍĞ´¹ı¡°ÇëÎğÊÓÎªÒÑÅÅÆÚ»òÒÑÉÏÏß¡±£¬²»Ó¦Îó±¨£»·ñ¶¨Ö»¿´Í¬Ò»·Ö¾ä¡£ ... ok
+test_false_save_claim_is_flagged (test_agent_loop.AgentLoopTest.test_false_save_claim_is_flagged) ... ok
+test_finishing_without_save_is_incomplete (test_agent_loop.AgentLoopTest.test_finishing_without_save_is_incomplete) ... ok
+test_happy_path_completed (test_agent_loop.AgentLoopTest.test_happy_path_completed) ... ok
+test_llm_error_returns_error_status (test_agent_loop.AgentLoopTest.test_llm_error_returns_error_status) ... ok
+test_more_claim_phrasings (test_agent_loop.AgentLoopTest.test_more_claim_phrasings) ... ok
+test_parallel_calls_share_next_round_action (test_agent_loop.AgentLoopTest.test_parallel_calls_share_next_round_action) ... ok
+test_publish_claim_is_flagged_not_trusted (test_agent_loop.AgentLoopTest.test_publish_claim_is_flagged_not_trusted) ... ok
+test_saved_draft_survives_later_rejected_revision (test_agent_loop.AgentLoopTest.test_saved_draft_survives_later_rejected_revision) ... ok
+test_step_limit_returns_incomplete (test_agent_loop.AgentLoopTest.test_step_limit_returns_incomplete) ... ok
+test_tool_call_limit_returns_incomplete (test_agent_loop.AgentLoopTest.test_tool_call_limit_returns_incomplete) ... ok
+test_tool_errors_are_fed_back_and_loop_continues (test_agent_loop.AgentLoopTest.test_tool_errors_are_fed_back_and_loop_continues) ... ok
+test_trace_records_args_basis_summary_and_next_action (test_agent_loop.AgentLoopTest.test_trace_records_args_basis_summary_and_next_action) ... ok
+test_unchecked_facts_are_null_not_clean (test_agent_loop.AgentLoopTest.test_unchecked_facts_are_null_not_clean) ... ok
+test_unsaved_plan_is_not_ready_to_confirm (test_agent_loop.AgentLoopTest.test_unsaved_plan_is_not_ready_to_confirm) ... ok
+test_fallbacks_off_uses_plain_messages (test_providers.AnthropicAdapterTest.test_fallbacks_off_uses_plain_messages) ... ok
+test_refusal_raises (test_providers.AnthropicAdapterTest.test_refusal_raises) ... ok
+test_tool_use_round_trip (test_providers.AnthropicAdapterTest.test_tool_use_round_trip) ... ok
+test_full_loop_through_adapter (test_providers.OpenAICompatAdapterTest.test_full_loop_through_adapter) ... ok
+test_interrupted_or_malformed_responses_raise (test_providers.OpenAICompatAdapterTest.test_interrupted_or_malformed_responses_raise) ... ok
+test_length_cutoff_raises (test_providers.OpenAICompatAdapterTest.test_length_cutoff_raises) ... ok
+test_parses_multiple_calls_and_bad_json (test_providers.OpenAICompatAdapterTest.test_parses_multiple_calls_and_bad_json) ... ok
+test_reasoning_content_is_passed_back (test_providers.OpenAICompatAdapterTest.test_reasoning_content_is_passed_back) ... ok
+test_every_record_keeps_invariants (test_records.RecordInvariantTest.test_every_record_keeps_invariants) ... ok
+test_records_exist (test_records.RecordInvariantTest.test_records_exist) ... ok
+test_corrupt_drafts_file_is_a_reported_save_failure (test_review_fixes.DraftStoreRobustnessTest.test_corrupt_drafts_file_is_a_reported_save_failure) ... ok
+test_new_risk_fact_with_same_slot_updates_draft (test_review_fixes.DraftStoreRobustnessTest.test_new_risk_fact_with_same_slot_updates_draft) ... ok
+test_block_cancels_open_confirmations (test_review_fixes.HoldsTest.test_block_cancels_open_confirmations) ... ok
+test_cannot_propose_slot_for_unschedulable_material (test_review_fixes.HoldsTest.test_cannot_propose_slot_for_unschedulable_material) ... ok
+test_new_proposal_supersedes_old_one_and_releases_slot (test_review_fixes.HoldsTest.test_new_proposal_supersedes_old_one_and_releases_slot) ... ok
+test_superseded_proposal_cannot_justify_reschedule (test_review_fixes.HoldsTest.test_superseded_proposal_cannot_justify_reschedule) ... ok
+test_non_canonical_request_time_is_normalized (test_review_fixes.NormalizationTest.test_non_canonical_request_time_is_normalized) ... ok
+test_non_canonical_schedule_entry_still_occupies_slot (test_review_fixes.NormalizationTest.test_non_canonical_schedule_entry_still_occupies_slot)
+ÆÀÉóÊÖ¸Ä schedule.json Ğ´³É '2026-11-3 19:00' Ò²±ØĞë±»Ê¶±ğÎªÕ¼ÓÃ¡£ ... ok
+test_unknown_channel_and_past_time_are_missing_info (test_review_fixes.NormalizationTest.test_unknown_channel_and_past_time_are_missing_info) ... ok
+test_unparseable_schedule_is_a_config_error (test_review_fixes.NormalizationTest.test_unparseable_schedule_is_a_config_error) ... ok
+test_license_not_covering_date_is_caught_without_verify_rule (test_review_fixes.ReviewRuleTest.test_license_not_covering_date_is_caught_without_verify_rule) ... ok
+test_missing_info_cannot_be_disguised_as_blocked (test_review_fixes.ReviewRuleTest.test_missing_info_cannot_be_disguised_as_blocked) ... ok
+test_pending_scope_lists_materials_before_saving (test_review_fixes.ReviewRuleTest.test_pending_scope_lists_materials_before_saving) ... ok
+test_fixed_item_keeps_contested_slot_even_if_listed_second (test_review_fixes.SlotPriorityTest.test_fixed_item_keeps_contested_slot_even_if_listed_second) ... ok
+test_unschedulable_item_releases_its_requested_slot (test_review_fixes.SlotPriorityTest.test_unschedulable_item_releases_its_requested_slot) ... ok
+test_changed_schedule_resubmit_updates_same_draft (test_scenarios.ScenarioTest.test_changed_schedule_resubmit_updates_same_draft) ... ok
+test_competing_materials_get_distinct_slots (test_scenarios.ScenarioTest.test_competing_materials_get_distinct_slots) ... ok
+test_duplicate_material_is_not_reported_as_rule_checked (test_scenarios.ScenarioTest.test_duplicate_material_is_not_reported_as_rule_checked) ... ok
+test_duplicate_submission_keeps_one_draft (test_scenarios.ScenarioTest.test_duplicate_submission_keeps_one_draft) ... ok
+test_edited_schedule_is_respected (test_scenarios.ScenarioTest.test_edited_schedule_is_respected)
+ÆÀÉó¸ÄÕ¼ÓÃÊ±¶Î£º°Ñ app_home 10:00 ÉèÎªÒÑÕ¼ÓÃ£¬M02 Ó¦¸ÄÎª´ıÈ·ÈÏµÄÌæ´úÊ±¶Î¡£ ... ok
+test_fixed_time_is_not_moved (test_scenarios.ScenarioTest.test_fixed_time_is_not_moved) ... ok
+test_missing_info (test_scenarios.ScenarioTest.test_missing_info) ... ok
+test_normal_schedule (test_scenarios.ScenarioTest.test_normal_schedule) ... ok
+test_pending_scope_finds_and_schedules_all_pending (test_scenarios.ScenarioTest.test_pending_scope_finds_and_schedules_all_pending) ... ok
+test_retryable_save_failure_then_success (test_scenarios.ScenarioTest.test_retryable_save_failure_then_success) ... ok
+test_rule_risk (test_scenarios.ScenarioTest.test_rule_risk) ... ok
+test_save_failure_is_reported (test_scenarios.ScenarioTest.test_save_failure_is_reported) ... ok
+test_slot_conflict_reference_case (test_scenarios.ScenarioTest.test_slot_conflict_reference_case) ... ok
+test_tool_limit_incomplete (test_scenarios.ScenarioTest.test_tool_limit_incomplete) ... ok
+test_changed_plan_for_same_request_updates_in_place (test_tools.DraftStoreTest.test_changed_plan_for_same_request_updates_in_place) ... ok
+test_fail_always_reports_failure_and_writes_nothing (test_tools.DraftStoreTest.test_fail_always_reports_failure_and_writes_nothing) ... ok
+test_fail_once_then_retry_succeeds (test_tools.DraftStoreTest.test_fail_once_then_retry_succeeds) ... ok
+test_reworded_same_plan_is_duplicate (test_tools.DraftStoreTest.test_reworded_same_plan_is_duplicate)
+ÕæÊµÄ£ĞÍÃ¿´Î´ë´Ç²»Í¬£º·½°¸£¨½áÂÛ/Ê±¶Î/È·ÈÏ×´Ì¬£©²»±ä¾ÍÊÓÎªÖØ¸´Ìá½»£¬±£ÁôÔ­²İ¸å¡£ ... ok
+test_same_request_saved_twice_keeps_one_draft (test_tools.DraftStoreTest.test_same_request_saved_twice_keeps_one_draft) ... ok
+test_save_rechecks_latest_schedule (test_tools.DraftStoreTest.test_save_rechecks_latest_schedule)
+ÅÅÆÚÔÚ²éÑ¯ºó±»±ğÈËÕ¼ÓÃ£º±£´æÊ±ÏÖ¶ÁÅÅÆÚ²¢¾Ü¾ø£¬¶ø²»ÊÇÓÃ¹ıÆÚµÄ²éÑ¯½á¹û¡£ ... ok
+test_alternatives_exclude_slots_proposed_to_other_material (test_tools.ReadToolsTest.test_alternatives_exclude_slots_proposed_to_other_material) ... ok
+test_cannot_propose_occupied_slot (test_tools.ReadToolsTest.test_cannot_propose_occupied_slot) ... ok
+test_duration_over_limit_is_warn (test_tools.ReadToolsTest.test_duration_over_limit_is_warn) ... ok
+test_missing_fields_and_not_found (test_tools.ReadToolsTest.test_missing_fields_and_not_found) ... ok
+test_request_missing_publish_time_is_reported (test_tools.ReadToolsTest.test_request_missing_publish_time_is_reported) ... ok
+test_rule_levels (test_tools.ReadToolsTest.test_rule_levels) ... ok
+test_slot_conflict_prefers_later_alternative (test_tools.ReadToolsTest.test_slot_conflict_prefers_later_alternative) ... ok
+test_unknown_tool_and_bad_arguments (test_tools.ReadToolsTest.test_unknown_tool_and_bad_arguments) ... ok
+test_verify_copyright_valid_vs_expired (test_tools.ReadToolsTest.test_verify_copyright_valid_vs_expired) ... ok
+test_every_material_needs_exactly_one_entry (test_tools.SaveDraftReviewTest.test_every_material_needs_exactly_one_entry) ... ok
+test_fixed_time_cannot_be_changed_without_consent (test_tools.SaveDraftReviewTest.test_fixed_time_cannot_be_changed_without_consent) ... ok
+test_needs_info_requires_evidence (test_tools.SaveDraftReviewTest.test_needs_info_requires_evidence) ... ok
+test_occupied_or_duplicated_slots_rejected (test_tools.SaveDraftReviewTest.test_occupied_or_duplicated_slots_rejected) ... ok
+test_reschedule_requires_confirmation (test_tools.SaveDraftReviewTest.test_reschedule_requires_confirmation) ... ok
+test_risky_material_cannot_be_scheduled_directly (test_tools.SaveDraftReviewTest.test_risky_material_cannot_be_scheduled_directly) ... ok
+
+----------------------------------------------------------------------
+Ran 76 tests in 0.276s
+
+OK

@@ -1,0 +1,49 @@
+{
+  "drafts": {
+    "98939b91f9cb3755": {
+      "draft_id": "D-98939b91",
+      "request_key": "98939b91f9cb3755",
+      "request_id": "REQ-1103-CONFLICT",
+      "status": "draft",
+      "version": 1,
+      "created_at": "2026-10-29T12:40:03",
+      "updated_at": "2026-10-29T12:40:03",
+      "plan_hash": "7d650140b78432e542fc828877b2901f9fa01c5089cf8bf9644f0f513cafc088",
+      "entries": [
+        {
+          "material_id": "M01",
+          "title": "秋季新品开箱",
+          "decision": "pending_confirmation",
+          "review_status": "待确认",
+          "channel": "app_home",
+          "requested_slot": "2026-11-03 18:00",
+          "time_rule": "preferred",
+          "suggested_slot": "2026-11-03 19:00",
+          "slot_changed": true,
+          "risk_reasons": [],
+          "pending_items": [
+            "确认改期：2026-11-03 18:00 → 2026-11-03 19:00"
+          ],
+          "risk_facts": {
+            "rule_hits": [],
+            "copyright_verified": null,
+            "missing_fields": [],
+            "request_problems": [],
+            "already_scheduled": [],
+            "blocked": false
+          },
+          "confirmations": [
+            {
+              "confirmation_id": "C-M01-5c2294",
+              "question": "M01 要求时间 2026-11-03 18:00 不可用（已被已有排期 S-1103-02《晚间档推荐》占用），建议改到 2026-11-03 19:00，是否同意？",
+              "proposed_slot": "2026-11-03 19:00",
+              "status": "awaiting_user"
+            }
+          ],
+          "confirm_state": "awaiting_user_decision"
+        }
+      ],
+      "history": []
+    }
+  }
+}

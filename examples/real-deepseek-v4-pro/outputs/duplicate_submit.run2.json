@@ -1,0 +1,201 @@
+{
+  "status": "completed",
+  "status_reason": null,
+  "mode": "openai-compatible:deepseek-v4-pro",
+  "mode_notice": null,
+  "request_id": "REQ-1103-DUP",
+  "request_key": "73284da86131e6df",
+  "scope": "items",
+  "as_of": "2026-10-29 09:00",
+  "input_notes": [
+    "请求中 M02 重复出现且要求相同，已合并为一条"
+  ],
+  "published": false,
+  "publish_notice": "本 Agent 只生成排期草稿，没有发布能力；所有条目需用户确认后才生效",
+  "draft": {
+    "saved": true,
+    "result": "duplicate_unchanged",
+    "draft_id": "D-73284da8",
+    "version": 1,
+    "message": "相同请求的草稿已存在且排期方案一致，未重复创建（保留原草稿）",
+    "save_attempts": 1
+  },
+  "materials": [
+    {
+      "material_id": "M02",
+      "title": "周末城市 vlog 合集",
+      "decision": "schedule",
+      "review_status": "审核通过，按要求时段排期",
+      "channel": "app_home",
+      "requested_slot": "2026-11-03 10:00",
+      "time_rule": "preferred",
+      "suggested_slot": "2026-11-03 10:00",
+      "slot_changed": false,
+      "risk_reasons": [],
+      "pending_items": [],
+      "risk_facts": {
+        "rule_hits": [],
+        "copyright_verified": null,
+        "missing_fields": [],
+        "request_problems": [],
+        "already_scheduled": [],
+        "blocked": false
+      },
+      "confirmations": [],
+      "confirm_state": "ready_to_confirm",
+      "draft_status": "已写入草稿 D-73284da8",
+      "tool_facts": {
+        "found": true,
+        "missing_fields": [],
+        "already_scheduled": [],
+        "rule_hits": [],
+        "copyright_declared": "valid",
+        "copyright_verified": null,
+        "slot_available": true,
+        "slot_conflict": null,
+        "blocked": false
+      }
+    },
+    {
+      "material_id": "M06",
+      "title": "老用户回馈活动",
+      "decision": "duplicate",
+      "review_status": "重复提交，已在排期中",
+      "channel": "douyin",
+      "requested_slot": "2026-11-03 19:00",
+      "time_rule": "preferred",
+      "suggested_slot": null,
+      "slot_changed": false,
+      "risk_reasons": [
+        "素材已在已有排期中：S-1103-06，douyin 2026-11-03 19:00"
+      ],
+      "pending_items": [],
+      "risk_facts": {
+        "rule_hits": null,
+        "copyright_verified": null,
+        "missing_fields": [],
+        "request_problems": [],
+        "already_scheduled": [
+          "S-1103-06"
+        ],
+        "blocked": false
+      },
+      "confirmations": [],
+      "confirm_state": "not_schedulable",
+      "draft_status": "已写入草稿 D-73284da8",
+      "tool_facts": {
+        "found": true,
+        "missing_fields": [],
+        "already_scheduled": [
+          "S-1103-06"
+        ],
+        "rule_hits": null,
+        "copyright_declared": "valid",
+        "copyright_verified": null,
+        "slot_available": null,
+        "slot_conflict": null,
+        "blocked": false
+      }
+    }
+  ],
+  "pending_confirmations": [],
+  "guard_flags": [],
+  "model_summary": "处理完成，草稿已保存。总结如下：\n\n**M02（周末城市 vlog 合集）**\n- 结论：可排期（schedule）\n- 建议时段：2026-11-03 10:00（app_home，符合 preferred 要求，时段可用）\n- 规则检查无命中，版权有效，无待确认事项。\n\n**M06（老用户回馈活动）**\n- 结论：重复提交（duplicate）\n- 该素材已在已有排期中：排期编号 S-1103-06，渠道 douyin，时段 2026-11-03 19:00，本次未重复排期。\n\n**草稿保存结果**\n- 草稿 ID：D-73284da8（version 1）\n- 返回结果：duplicate_unchanged——相同请求的草稿已存在且排期方案一致，未重复创建，保留原草稿。\n\n无需用户额外确认的事项。",
+  "usage": {
+    "steps": 5,
+    "tool_calls": 5,
+    "max_steps": 40,
+    "max_tool_calls": 80
+  },
+  "trace": [
+    {
+      "step": 1,
+      "call": 1,
+      "type": "tool_call",
+      "tool": "get_material",
+      "args": {
+        "material_id": "M02"
+      },
+      "basis": "请求已列出 M02，读取元数据检查必填字段与发布要求是否有效",
+      "ok": true,
+      "result_summary": "《周末城市 vlog 合集》；必填字段齐全；版权声明状态 valid（未核验）",
+      "next_action": "check_rules(M02)"
+    },
+    {
+      "step": 1,
+      "call": 2,
+      "type": "tool_call",
+      "tool": "get_material",
+      "args": {
+        "material_id": "M06"
+      },
+      "basis": "请求已列出 M06，读取元数据检查必填字段与发布要求是否有效",
+      "ok": true,
+      "result_summary": "《老用户回馈活动》；必填字段齐全；版权声明状态 valid（未核验）；已在排期 S-1103-06(douyin 2026-11-03 19:00)",
+      "next_action": "check_rules(M02)"
+    },
+    {
+      "step": 2,
+      "call": 3,
+      "type": "tool_call",
+      "tool": "check_rules",
+      "args": {
+        "material_id": "M02"
+      },
+      "basis": "M02 元数据完整、未在已有排期中，进行规则检查",
+      "ok": true,
+      "result_summary": "无规则风险",
+      "next_action": "query_slots(M02)"
+    },
+    {
+      "step": 3,
+      "call": 4,
+      "type": "tool_call",
+      "tool": "query_slots",
+      "args": {
+        "material_id": "M02",
+        "channel": "app_home",
+        "publish_time": "2026-11-03 10:00"
+      },
+      "basis": "M02 规则检查无命中，查询 app_home 在要求时间 10:00 是否可用",
+      "ok": true,
+      "result_summary": "app_home 2026-11-03 10:00 可用",
+      "next_action": "save_draft"
+    },
+    {
+      "step": 4,
+      "call": 5,
+      "type": "tool_call",
+      "tool": "save_draft",
+      "args": {
+        "entries": [
+          {
+            "material_id": "M02",
+            "decision": "schedule",
+            "suggested_slot": "2026-11-03 10:00",
+            "risk_reasons": [],
+            "pending_items": []
+          },
+          {
+            "material_id": "M06",
+            "decision": "duplicate",
+            "suggested_slot": "",
+            "risk_reasons": [
+              "素材已在已有排期中：S-1103-06，douyin 2026-11-03 19:00"
+            ],
+            "pending_items": []
+          }
+        ]
+      },
+      "basis": "M02 时段可用无风险，M06 已在已有排期中，汇总保存草稿",
+      "ok": true,
+      "result_summary": "duplicate_unchanged：D-73284da8 v1（相同请求的草稿已存在且排期方案一致，未重复创建（保留原草稿））",
+      "next_action": "结束，输出总结"
+    }
+  ],
+  "inputs": {
+    "request": "examples/inputs/duplicate_submit.json",
+    "schedule": "data/schedule.json",
+    "drafts": "examples/real-deepseek-v4-pro/drafts/duplicate_submit.drafts.json"
+  }
+}

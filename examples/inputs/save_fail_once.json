@@ -1,0 +1,19 @@
+{
+  "request_id": "REQ-1103-SAVERETRY",
+  "as_of": "2026-10-29 09:00",
+  "items": [
+    {
+      "material_id": "M02",
+      "channel": "app_home",
+      "publish_time": "2026-11-03 10:00"
+    },
+    {
+      "material_id": "M07",
+      "channel": "douyin",
+      "publish_time": "2026-11-03 15:00"
+    }
+  ],
+  "simulate": {
+    "save_draft": "fail_once"
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "_note": "合成数据，不含真实业务信息。status: pending_review=待审核, scheduled=已在排期中；requested_publish=素材负责人提交时登记的发布要求（scope=pending 时使用）",
+  "materials": [
+    {
+      "material_id": "M01",
+      "title": "秋季新品开箱",
+      "type": "video",
+      "owner": "运营-阿青",
+      "cover_url": "https://assets.example.com/m01/cover.jpg",
+      "duration_sec": 45,
+      "description": "开箱展示秋季新品外观与细节",
+      "copyright": {
+        "license_id": "LIC-001",
+        "status": "valid"
+      },
+      "flags": {
+        "is_commercial": false,
+        "ad_label": false,
+        "involves_minor": false
+      },
+      "status": "pending_review",
+      "requested_publish": {
+        "channel": "app_home",
+        "publish_time": "2026-11-03 18:00",
+        "time_rule": "preferred"
+      }
+    },
+    {
+      "material_id": "M02",
+      "title": "周末城市 vlog 合集",
+      "type": "video",
+      "owner": "运营-小周",
+      "cover_url": "https://assets.example.com/m02/cover.jpg",
+      "duration_sec": 90,
+      "description": "城市周末打卡合集",
+      "copyright": {
+        "license_id": "LIC-002",
+        "status": "valid"
+      },
+      "flags": {
+        "is_commercial": false,
+        "ad_label": false,
+        "involves_minor": false
+      },
+      "status": "pending_review",
+      "requested_publish": {
+        "channel": "app_home",
+        "publish_time": "2026-11-03 10:00",
+        "time_rule": "preferred"
+      }
+    },
+    {
+      "material_id": "M03",
+      "title": "双十一会场海报",
+      "type": "image",
+      "owner": "设计-阿木",
+      "image_url": "",
+      "description": "会场主视觉海报",
+      "copyright": null,
+      "flags": {
+        "is_commercial": true,
+        "ad_label": true,
+        "involves_minor": false
+      },
+      "status": "pending_review",
+      "requested_publish": {
+        "channel": "app_home",
+        "publish_time": "2026-11-03 15:00",
+        "time_rule": "preferred"
+      }
+    },
+    {
+      "material_id": "M04",
+      "title": "全网最低价！降噪耳机限时抢",
+      "type": "video",
+      "owner": "电商-小林",
+      "cover_url": "https://assets.example.com/m04/cover.jpg",
+      "duration_sec": 30,
+      "description": "降噪耳机促销短片",
+      "copyright": {
+        "license_id": "LIC-004",
+        "status": "valid"
+      },
+      "flags": {
+        "is_commercial": true,
+        "ad_label": true,
+        "involves_minor": false
+      },
+      "status": "pending_review",
+      "requested_publish": {
+        "channel": "app_home",
+        "publish_time": "2026-11-03 14:00",
+        "time_rule": "preferred"
+      }
+    },
+    {
+      "material_id": "M05",
+      "title": "毕业季混剪",
+      "type": "video",
+      "owner": "运营-阿青",
+      "cover_url": "https://assets.example.com/m05/cover.jpg",
+      "duration_sec": 60,
+      "description": "毕业季主题混剪，含背景音乐",
+      "copyright": {
+        "license_id": "LIC-005",
+        "status": "pending"
+      },
+      "flags": {
+        "is_commercial": false,
+        "ad_label": false,
+        "involves_minor": false
+      },
+      "status": "pending_review",
+      "requested_publish": {
+        "channel": "app_home",
+        "publish_time": "2026-11-03 16:00",
+        "time_rule": "preferred"
+      }
+    },
+    {
+      "material_id": "M06",
+      "title": "老用户回馈活动",
+      "type": "video",
+      "owner": "运营-小周",
+      "cover_url": "https://assets.example.com/m06/cover.jpg",
+      "duration_sec": 40,
+      "description": "老用户回馈活动说明",
+      "copyright": {
+        "license_id": "LIC-006",
+        "status": "valid"
+      },
+      "flags": {
+        "is_commercial": false,
+        "ad_label": false,
+        "involves_minor": false
+      },
+      "status": "scheduled"
+    },
+    {
+      "material_id": "M07",
+      "title": "咖啡拉花教程",
+      "type": "video",
+      "owner": "运营-小林",
+      "cover_url": "https://assets.example.com/m07/cover.jpg",
+      "duration_sec": 75,
+      "description": "拉花入门教程，含背景音乐",
+      "copyright": {
+        "license_id": "LIC-007",
+        "status": "pending"
+      },
+      "flags": {
+        "is_commercial": false,
+        "ad_label": false,
+        "involves_minor": false
+      },
+      "status": "pending_review",
+      "requested_publish": {
+        "channel": "douyin",
+        "publish_time": "2026-11-03 15:00",
+        "time_rule": "preferred"
+      }
+    },
+    {
+      "material_id": "M08",
+      "title": "新品发布会直播预热",
+      "type": "video",
+      "owner": "市场-阿杰",
+      "cover_url": "https://assets.example.com/m08/cover.jpg",
+      "duration_sec": 20,
+      "description": "配合 20:00 发布会直播的预热短片",
+      "copyright": {
+        "license_id": "LIC-008",
+        "status": "valid"
+      },
+      "flags": {
+        "is_commercial": false,
+        "ad_label": false,
+        "involves_minor": false
+      },
+      "status": "pending_review",
+      "requested_publish": {
+        "channel": "app_home",
+        "publish_time": "2026-11-03 20:00",
+        "time_rule": "fixed"
+      }
+    },
+    {
+      "material_id": "M09",
+      "title": "直播间专属优惠券",
+      "type": "video",
+      "owner": "电商-小林",
+      "cover_url": "https://assets.example.com/m09/cover.jpg",
+      "duration_sec": 25,
+      "description": "直播间限时优惠券领取说明",
+      "copyright": {
+        "license_id": "LIC-009",
+        "status": "valid"
+      },
+      "flags": {
+        "is_commercial": true,
+        "ad_label": false,
+        "involves_minor": false
+      },
+      "status": "pending_review",
+      "requested_publish": {
+        "channel": "douyin",
+        "publish_time": "2026-11-03 16:00",
+        "time_rule": "preferred"
+      }
+    }
+  ]
+}

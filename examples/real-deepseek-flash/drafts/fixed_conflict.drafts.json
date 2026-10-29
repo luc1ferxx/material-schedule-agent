@@ -1,0 +1,52 @@
+{
+  "drafts": {
+    "016e2b63143aeeae": {
+      "draft_id": "D-016e2b63",
+      "request_key": "016e2b63143aeeae",
+      "request_id": "REQ-1103-FIXED",
+      "status": "draft",
+      "version": 1,
+      "created_at": "2026-10-29T12:17:11",
+      "updated_at": "2026-10-29T12:17:11",
+      "plan_hash": "0f491bfdda36f94e66f6f1c08e88b930bf884504d2bf1c8ccf01dc61232fc108",
+      "entries": [
+        {
+          "material_id": "M08",
+          "title": "新品发布会直播预热",
+          "decision": "pending_confirmation",
+          "review_status": "待确认",
+          "channel": "app_home",
+          "requested_slot": "2026-11-03 20:00",
+          "time_rule": "fixed",
+          "suggested_slot": null,
+          "slot_changed": false,
+          "risk_reasons": [
+            "硬性发布时段 app_home 2026-11-03 20:00 不可用：已被已有排期 S-1103-03《直播间开播提醒》占用（更近的 21:00 亦被 S-1103-04《品牌故事》占用）",
+            "已登记确认事项 C-M08-41a861，建议替代时段 2026-11-03 19:00（另可选 22:00、17:00），等待用户确认"
+          ],
+          "pending_items": [
+            "是否同意将 M08 从硬性要求的 2026-11-03 20:00 改到 2026-11-03 19:00（或选择 22:00 / 17:00）"
+          ],
+          "risk_facts": {
+            "rule_hits": [],
+            "copyright_verified": null,
+            "missing_fields": [],
+            "request_problems": [],
+            "already_scheduled": [],
+            "blocked": false
+          },
+          "confirmations": [
+            {
+              "confirmation_id": "C-M08-41a861",
+              "question": "M08《新品发布会直播预热》要求硬性在 app_home 2026-11-03 20:00 发布，但该时段已被已有排期 S-1103-03《直播间开播提醒》占用（21:00 亦被 S-1103-04《品牌故事》占用）。可选替代时段为 2026-11-03 19:00、22:00、17:00。考虑到素材是配合 20:00 发布会直播的预热短片（推断：需在直播前发布），建议改到 2026-11-03 19:00。请确认是否同意改期，或指定其他时段。",
+              "proposed_slot": "2026-11-03 19:00",
+              "status": "awaiting_user"
+            }
+          ],
+          "confirm_state": "awaiting_user_decision"
+        }
+      ],
+      "history": []
+    }
+  }
+}

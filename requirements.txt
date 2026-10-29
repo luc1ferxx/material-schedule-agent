@@ -1,0 +1,4 @@
+# 核心流程、离线 Mock 与全部单元测试只用 Python 标准库（3.10+），无需安装任何依赖。
+# 以下两个官方 SDK 仅在接入真实模型时需要（按需安装其一即可）：
+anthropic>=2.3.0   # --provider anthropic（Claude）
+openai>=3.41.0     # --provider openai（DeepSeek / 通义千问 / GLM / Kimi 等 OpenAI 兼容接口）

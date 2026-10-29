@@ -1,0 +1,105 @@
+{
+  "drafts": {
+    "fe17af77adffa2e3": {
+      "draft_id": "D-fe17af77",
+      "request_key": "fe17af77adffa2e3",
+      "request_id": "REQ-1103-MISSING",
+      "status": "draft",
+      "version": 1,
+      "created_at": "2026-10-29T12:17:46",
+      "updated_at": "2026-10-29T12:17:46",
+      "plan_hash": "68bdd112a474e61e3f8ee6cf4739ca6f184618d1457ec241fd07e47954342ce7",
+      "entries": [
+        {
+          "material_id": "M03",
+          "title": "双十一会场海报",
+          "decision": "needs_info",
+          "review_status": "信息缺失，待补充",
+          "channel": "app_home",
+          "requested_slot": "2026-11-03 15:00",
+          "time_rule": "preferred",
+          "suggested_slot": null,
+          "slot_changed": false,
+          "risk_reasons": [
+            "get_material 返回 missing_fields=[image_url, copyright]：缺少图片地址与版权信息，必填字段不完整，无法审核与排期"
+          ],
+          "pending_items": [
+            "请补充 M03 的 image_url（图片地址）与 copyright（版权信息/license_id），补齐后再审核"
+          ],
+          "risk_facts": {
+            "rule_hits": null,
+            "copyright_verified": null,
+            "missing_fields": [
+              "image_url",
+              "copyright"
+            ],
+            "request_problems": [],
+            "already_scheduled": [],
+            "blocked": false
+          },
+          "confirmations": [],
+          "confirm_state": "not_schedulable"
+        },
+        {
+          "material_id": "M99",
+          "title": null,
+          "decision": "needs_info",
+          "review_status": "信息缺失，待补充",
+          "channel": "app_home",
+          "requested_slot": "2026-11-03 16:00",
+          "time_rule": "preferred",
+          "suggested_slot": null,
+          "slot_changed": false,
+          "risk_reasons": [
+            "get_material 返回 found=false：素材库中不存在该 ID，无法审核与排期"
+          ],
+          "pending_items": [
+            "请确认 M99 的素材 ID 是否正确，或提供已入库的素材 ID"
+          ],
+          "risk_facts": {
+            "rule_hits": null,
+            "copyright_verified": null,
+            "missing_fields": [],
+            "request_problems": [],
+            "already_scheduled": [],
+            "blocked": false
+          },
+          "confirmations": [],
+          "confirm_state": "not_schedulable"
+        },
+        {
+          "material_id": "M02",
+          "title": "周末城市 vlog 合集",
+          "decision": "needs_info",
+          "review_status": "信息缺失，待补充",
+          "channel": "douyin",
+          "requested_slot": null,
+          "time_rule": "preferred",
+          "suggested_slot": null,
+          "slot_changed": false,
+          "risk_reasons": [
+            "get_material 返回 request_missing=[publish_time（发布时间要求）缺失]：本次发布要求中发布时间为空，无法确认时段；且本次要求渠道为 douyin，而素材元数据登记的 requested_publish 为 app_home / 2026-11-03 10:00，两者不一致",
+            "信息缺失，未查询规则与可用时段"
+          ],
+          "pending_items": [
+            "请补充 M02 的发布时间（publish_time）",
+            "请确认发布渠道：本次请求为 douyin，素材登记为 app_home，需明确以哪个为准"
+          ],
+          "risk_facts": {
+            "rule_hits": null,
+            "copyright_verified": null,
+            "missing_fields": [],
+            "request_problems": [
+              "publish_time（发布时间要求）缺失"
+            ],
+            "already_scheduled": [],
+            "blocked": false
+          },
+          "confirmations": [],
+          "confirm_state": "not_schedulable"
+        }
+      ],
+      "history": []
+    }
+  }
+}
