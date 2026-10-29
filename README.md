@@ -7,7 +7,7 @@ Agent 由模型驱动：模型选工具 → 执行 → 看结果 → 决定补�
 | 项目 | 内容 |
 |---|---|
 | 题号 | 1 · 素材审核与发布排期 Agent |
-| GitHub URL / commit SHA | TODO(候选人)：推送后填写 |
+| GitHub URL / commit SHA | https://github.com/luc1ferxx/material-schedule-agent ；commit SHA 以提交表单为准（`main` 分支最新提交；README 无法写入自身所在提交的 SHA） |
 | 运行方式 | CLI（Python 3.10+；核心、离线 Mock 与全部测试零第三方依赖） |
 | 模型 | OpenAI 兼容接口（官方 `openai` SDK，默认 DeepSeek `deepseek-v4-pro`）或 Claude（官方 `anthropic` SDK，默认 `claude-opus-5-5`）；无 Key 时用离线 Mock |
 | 真实模型运行记录 | `deepseek-v4-pro` 与 `deepseek-flash` 各跑全部 12 个场景：[examples/real-deepseek-v4-pro](examples/real-deepseek-v4-pro/INDEX.md)、[examples/real-deepseek-flash](examples/real-deepseek-flash/INDEX.md) |
