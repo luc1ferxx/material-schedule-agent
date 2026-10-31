@@ -1,6 +1,9 @@
 """对抗性代码评审确认的问题的回归测试：输入规范化、时段优先级、暂留管理、复核规则、草稿库健壮性。"""
 import unittest
+from unittest import mock
 
+from src import run_examples
+from src.llm import LLMError
 from src.request import normalize_request
 from src.stores import DraftStore
 from tests.helpers import TempDirMixin, item
@@ -76,6 +79,25 @@ class SlotPriorityTest(TempDirMixin, unittest.TestCase):
         run(ex, "block_material", material_id="M05", risk_summary="版权失效")
         after = run(ex, "query_slots", material_id="M02", channel="app_home", publish_time="2026-11-03 19:00").data
         self.assertTrue(after["requested_available"])
+
+
+    def test_two_entries_on_same_slot_are_rejected(self):
+        """M01 已提议改期，不再占用 11:00，所以两条都能通过单条时段检查，只有草稿内撞车检查能拦下。"""
+        ctx, ex = self.make_ctx([item("M01", time="2026-11-03 11:00"), item("M02", time="2026-11-03 11:00")])
+        ready(ex, "M01", time="2026-11-03 11:00")
+        ready(ex, "M02", time="2026-11-03 11:00")
+        run(ex, "request_confirmation", material_id="M01", question="改期？", proposed_slot="2026-11-03 13:00")
+        out = run(ex, "save_draft", entries=[entry("M01", "pending_confirmation", "2026-11-03 11:00"),
+                                             entry("M02", "schedule", "2026-11-03 11:00")])
+        self.assertFalse(out.ok)
+        self.assertIn("的建议时段 2026-11-03 11:00 冲突", " ".join(out.data["problems"]))
+
+
+class RunExamplesCliTest(unittest.TestCase):
+    def test_missing_credentials_exit_2_without_traceback(self):
+        with mock.patch("src.run_examples.load_dotenv"), \
+                mock.patch("src.run_examples.make_llm", side_effect=LLMError("缺少 Key")):
+            self.assertEqual(run_examples.main(["--provider", "openai"]), 2)
 
 
 class HoldsTest(TempDirMixin, unittest.TestCase):

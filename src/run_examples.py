@@ -14,7 +14,7 @@ from pathlib import Path
 
 from .agent import Limits
 from .common import ROOT, load_dotenv
-from .llm import make_llm
+from .llm import LLMError, make_llm
 from .main import run_once
 from .render import render_trace_md
 
@@ -58,7 +58,11 @@ def main(argv=None) -> int:
     args = parser.parse_args(argv)
     load_dotenv(ROOT / ".env")
 
-    llm = make_llm(args.provider)
+    try:
+        llm = make_llm(args.provider)
+    except LLMError as exc:
+        print(json.dumps({"status": "invalid_input", "error": str(exc)}, ensure_ascii=False), file=sys.stderr)
+        return 2
     model, label = getattr(llm, "model", None), getattr(llm, "label", args.provider)
     out = Path(args.out) if args.out else ROOT / "examples" / ("" if args.provider == "mock" else f"real-{model}")
     only = set(args.only.split(",")) if args.only else None

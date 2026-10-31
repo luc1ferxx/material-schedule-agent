@@ -41,6 +41,8 @@ class RecordInvariantTest(unittest.TestCase):
                     slot = m.get("suggested_slot")
                     if m.get("time_rule") == "fixed":
                         self.assertIn(slot, (None, m["requested_slot"]), f"{m['material_id']} 硬性时间被改动")
+                    if m.get("decision") in ("needs_info", "blocked", "duplicate"):
+                        self.assertIsNone(slot, f"{m['material_id']} 不可排期却有建议时段")
                     if not slot:
                         continue
                     key = (m["channel"], slot)

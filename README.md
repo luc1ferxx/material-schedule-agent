@@ -2,7 +2,7 @@
 
 帮内容团队找出待处理素材、逐个审核，生成**无冲突、可确认**的发布排期草稿。
 Agent 由模型驱动：模型选工具 → 执行 → 看结果 → 决定补查、换时段、请求确认、阻断或结束。
-**只保存草稿，没有发布能力。** 草稿是否保存成功、哪些事项待确认，都以工具返回为准，不采信模型的自述。
+**只保存草稿，没有发布能力。** 草稿是否保存成功、`pending_confirmations` 里的待确认事项，都以工具返回为准，不采信模型的自述（`pending_items` 是模型写的说明文字）。
 
 | 项目 | 内容 |
 |---|---|
@@ -11,7 +11,7 @@ Agent 由模型驱动：模型选工具 → 执行 → 看结果 → 决定补�
 | 运行方式 | CLI（Python 3.10+；核心、离线 Mock 与全部测试零第三方依赖） |
 | 模型 | OpenAI 兼容接口（官方 `openai` SDK，默认 DeepSeek `deepseek-v4-pro`）或 Claude（官方 `anthropic` SDK，默认 `claude-opus-5-5`）；无 Key 时用离线 Mock |
 | 真实模型运行记录 | `deepseek-v4-pro` 与 `deepseek-flash` 各跑全部 12 个场景：[examples/real-deepseek-v4-pro](examples/real-deepseek-v4-pro/INDEX.md)、[examples/real-deepseek-flash](examples/real-deepseek-flash/INDEX.md) |
-| 实际用时 / 未完成部分 | 约 2 小时（2026-10-29 10:40–12:40，与 Claude Code 协作，分工见 [04 AI 使用](docs/04-ai-usage.md)）。未做：交互式确认闭环、跨请求的时段暂留、并发写草稿加锁（见 [03 评估](docs/03-evaluation.md)「限制」） |
+| 实际用时 / 未完成部分 | Claude Code 会话约 2 小时（2026-10-29 10:40–12:40，分工见 [04 AI 使用](docs/04-ai-usage.md)）；2026-10-31 的推送、手动复测和文档修订未单独计时。未做：交互式确认闭环、跨请求的时段暂留、并发写草稿加锁（见 [03 评估](docs/03-evaluation.md)「限制」） |
 
 > 边界说明：`examples/outputs`、`examples/traces` 是**离线 Mock**（固定规则模拟模型）的输出，只验证流程与护栏，不证明模型决策效果；
 > 真实模型的决策证据在 `examples/real-*` 目录。
@@ -36,7 +36,7 @@ python -m src.main --input examples/inputs/slot_conflict.json --mock --reset-dra
 - 第二条：用离线 Mock 跑全部 12 个场景（14 次运行），重新生成 `examples/outputs/`（实际输出 JSON）、`examples/traces/`（可读运行记录）和索引。
 - 第三条：单次运行。去掉 `--brief` 可看到完整 trace；`--output x.json`、`--trace-md x.md` 可落盘。
 
-退出码：`0` 完成；`1` 未完成 / 保存失败 / 模型调用失败（结果仍以 JSON 输出）；`2` 输入或配置错误（含 `data/schedule.json` 格式错误、缺少模型凭据）。
+`src.main` 退出码：`0` 完成；`1` 未完成 / 保存失败 / 模型调用失败（结果仍以 JSON 输出）；`2` 输入或配置错误（含 `data/schedule.json` 格式错误、缺少模型凭据）。
 
 ## 接入真实模型
 
@@ -78,7 +78,7 @@ python -m src.run_examples --provider openai
 `tests/test_records.py` 会逐个检查上述所有已提交记录：未发布、草稿状态与 save_draft 真实结果一致、硬性时间未改、改期都有确认、建议时段无冲突。
 
 > `normal.json`、`save_fail_once.json`、`save_fail_always.json` 的素材与时间相同，是**同一个请求**（`simulate` 不参与幂等键）。
-> 手动用 `src.main` 连续运行它们时请加 `--reset-drafts`，否则后跑的会得到 `duplicate_unchanged`——这正是防重复的预期行为。`run_examples` 已为每个场景单独使用草稿库。
+> 手动用 `src.main` 连续运行它们时请加 `--reset-drafts`，否则 `save_fail_once` 重试后会得到 `duplicate_unchanged`（防重复的预期行为）；`save_fail_always` 的故障注入发生在读草稿库之前，仍返回 `save_failed`。`run_examples` 已为每个场景单独使用草稿库。
 
 ### 自己动手改数据复测
 
@@ -116,7 +116,7 @@ python -m src.run_examples --provider openai
 
 输出要点：`status`（completed / incomplete / save_failed / error）、`draft`（是否保存、草稿 ID、版本、`changes`、失败原因、过期提示）、
 `materials[]`（每个素材的审核结论、风险原因、`risk_facts`、要求与建议时段、待确认项、草稿状态、工具事实）、`pending_confirmations`（仍待用户回复的确认）、
-`published`（恒为 false）、`guard_flags`（模型自述与工具事实不一致时的告警）、`inputs`（本次用到的请求/排期/草稿库文件）、
+`published`（恒为 false）、`guard_flags`（模型声称已发布、或声称已保存但没有成功写入时的告警；其他表述不校验）、`inputs`（本次用到的请求/排期/草稿库文件）、
 `trace`（每一步的工具、参数、返回摘要、决策依据、后续动作；超限未执行的调用也留痕）。
 
 ## 目录

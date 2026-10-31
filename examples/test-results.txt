@@ -1,10 +1,10 @@
 Command: python -m unittest discover -s tests -v
 Environment: 3.12.1 Windows-11-10.0.26200-SP0ï¼›å¦åœ¨ Python 3.10.0 ä¸Šè¿è¡ŒåŒæ ·å…¨éƒ¨é€šè¿‡
-Date: 2026-10-29 12:40
+Date: 2026-10-31 11:50
 
 test_blocking_after_save_marks_draft_stale (test_agent_loop.AgentLoopTest.test_blocking_after_save_marks_draft_stale) ... ok
 test_claim_detection_respects_negation (test_agent_loop.AgentLoopTest.test_claim_detection_respects_negation)
-ÕæÊµÄ£ĞÍĞ´¹ı¡°ÇëÎğÊÓÎªÒÑÅÅÆÚ»òÒÑÉÏÏß¡±£¬²»Ó¦Îó±¨£»·ñ¶¨Ö»¿´Í¬Ò»·Ö¾ä¡£ ... ok
+çœŸå®æ¨¡å‹å†™è¿‡â€œè¯·å‹¿è§†ä¸ºå·²æ’æœŸæˆ–å·²ä¸Šçº¿â€ï¼Œä¸åº”è¯¯æŠ¥ï¼›å¦å®šåªçœ‹åŒä¸€åˆ†å¥ã€‚ ... ok
 test_false_save_claim_is_flagged (test_agent_loop.AgentLoopTest.test_false_save_claim_is_flagged) ... ok
 test_finishing_without_save_is_incomplete (test_agent_loop.AgentLoopTest.test_finishing_without_save_is_incomplete) ... ok
 test_happy_path_completed (test_agent_loop.AgentLoopTest.test_happy_path_completed) ... ok
@@ -37,20 +37,24 @@ test_new_proposal_supersedes_old_one_and_releases_slot (test_review_fixes.HoldsT
 test_superseded_proposal_cannot_justify_reschedule (test_review_fixes.HoldsTest.test_superseded_proposal_cannot_justify_reschedule) ... ok
 test_non_canonical_request_time_is_normalized (test_review_fixes.NormalizationTest.test_non_canonical_request_time_is_normalized) ... ok
 test_non_canonical_schedule_entry_still_occupies_slot (test_review_fixes.NormalizationTest.test_non_canonical_schedule_entry_still_occupies_slot)
-ÆÀÉóÊÖ¸Ä schedule.json Ğ´³É '2026-11-3 19:00' Ò²±ØĞë±»Ê¶±ğÎªÕ¼ÓÃ¡£ ... ok
+è¯„å®¡æ‰‹æ”¹ schedule.json å†™æˆ '2026-11-3 19:00' ä¹Ÿå¿…é¡»è¢«è¯†åˆ«ä¸ºå ç”¨ã€‚ ... ok
 test_unknown_channel_and_past_time_are_missing_info (test_review_fixes.NormalizationTest.test_unknown_channel_and_past_time_are_missing_info) ... ok
 test_unparseable_schedule_is_a_config_error (test_review_fixes.NormalizationTest.test_unparseable_schedule_is_a_config_error) ... ok
 test_license_not_covering_date_is_caught_without_verify_rule (test_review_fixes.ReviewRuleTest.test_license_not_covering_date_is_caught_without_verify_rule) ... ok
 test_missing_info_cannot_be_disguised_as_blocked (test_review_fixes.ReviewRuleTest.test_missing_info_cannot_be_disguised_as_blocked) ... ok
 test_pending_scope_lists_materials_before_saving (test_review_fixes.ReviewRuleTest.test_pending_scope_lists_materials_before_saving) ... ok
+test_missing_credentials_exit_2_without_traceback (test_review_fixes.RunExamplesCliTest.test_missing_credentials_exit_2_without_traceback) ... {"status": "invalid_input", "error": "ç¼ºå°‘ Key"}
+ok
 test_fixed_item_keeps_contested_slot_even_if_listed_second (test_review_fixes.SlotPriorityTest.test_fixed_item_keeps_contested_slot_even_if_listed_second) ... ok
+test_two_entries_on_same_slot_are_rejected (test_review_fixes.SlotPriorityTest.test_two_entries_on_same_slot_are_rejected)
+M01 å·²æè®®æ”¹æœŸï¼Œä¸å†å ç”¨ 11:00ï¼Œæ‰€ä»¥ä¸¤æ¡éƒ½èƒ½é€šè¿‡å•æ¡æ—¶æ®µæ£€æŸ¥ï¼Œåªæœ‰è‰ç¨¿å†…æ’è½¦æ£€æŸ¥èƒ½æ‹¦ä¸‹ã€‚ ... ok
 test_unschedulable_item_releases_its_requested_slot (test_review_fixes.SlotPriorityTest.test_unschedulable_item_releases_its_requested_slot) ... ok
 test_changed_schedule_resubmit_updates_same_draft (test_scenarios.ScenarioTest.test_changed_schedule_resubmit_updates_same_draft) ... ok
 test_competing_materials_get_distinct_slots (test_scenarios.ScenarioTest.test_competing_materials_get_distinct_slots) ... ok
 test_duplicate_material_is_not_reported_as_rule_checked (test_scenarios.ScenarioTest.test_duplicate_material_is_not_reported_as_rule_checked) ... ok
 test_duplicate_submission_keeps_one_draft (test_scenarios.ScenarioTest.test_duplicate_submission_keeps_one_draft) ... ok
 test_edited_schedule_is_respected (test_scenarios.ScenarioTest.test_edited_schedule_is_respected)
-ÆÀÉó¸ÄÕ¼ÓÃÊ±¶Î£º°Ñ app_home 10:00 ÉèÎªÒÑÕ¼ÓÃ£¬M02 Ó¦¸ÄÎª´ıÈ·ÈÏµÄÌæ´úÊ±¶Î¡£ ... ok
+è¯„å®¡æ”¹å ç”¨æ—¶æ®µï¼šæŠŠ app_home 10:00 è®¾ä¸ºå·²å ç”¨ï¼ŒM02 åº”æ”¹ä¸ºå¾…ç¡®è®¤çš„æ›¿ä»£æ—¶æ®µã€‚ ... ok
 test_fixed_time_is_not_moved (test_scenarios.ScenarioTest.test_fixed_time_is_not_moved) ... ok
 test_missing_info (test_scenarios.ScenarioTest.test_missing_info) ... ok
 test_normal_schedule (test_scenarios.ScenarioTest.test_normal_schedule) ... ok
@@ -64,10 +68,10 @@ test_changed_plan_for_same_request_updates_in_place (test_tools.DraftStoreTest.t
 test_fail_always_reports_failure_and_writes_nothing (test_tools.DraftStoreTest.test_fail_always_reports_failure_and_writes_nothing) ... ok
 test_fail_once_then_retry_succeeds (test_tools.DraftStoreTest.test_fail_once_then_retry_succeeds) ... ok
 test_reworded_same_plan_is_duplicate (test_tools.DraftStoreTest.test_reworded_same_plan_is_duplicate)
-ÕæÊµÄ£ĞÍÃ¿´Î´ë´Ç²»Í¬£º·½°¸£¨½áÂÛ/Ê±¶Î/È·ÈÏ×´Ì¬£©²»±ä¾ÍÊÓÎªÖØ¸´Ìá½»£¬±£ÁôÔ­²İ¸å¡£ ... ok
+çœŸå®æ¨¡å‹æ¯æ¬¡æªè¾ä¸åŒï¼šæ–¹æ¡ˆï¼ˆç»“è®º/æ—¶æ®µ/ç¡®è®¤çŠ¶æ€ï¼‰ä¸å˜å°±è§†ä¸ºé‡å¤æäº¤ï¼Œä¿ç•™åŸè‰ç¨¿ã€‚ ... ok
 test_same_request_saved_twice_keeps_one_draft (test_tools.DraftStoreTest.test_same_request_saved_twice_keeps_one_draft) ... ok
 test_save_rechecks_latest_schedule (test_tools.DraftStoreTest.test_save_rechecks_latest_schedule)
-ÅÅÆÚÔÚ²éÑ¯ºó±»±ğÈËÕ¼ÓÃ£º±£´æÊ±ÏÖ¶ÁÅÅÆÚ²¢¾Ü¾ø£¬¶ø²»ÊÇÓÃ¹ıÆÚµÄ²éÑ¯½á¹û¡£ ... ok
+æ’æœŸåœ¨æŸ¥è¯¢åè¢«åˆ«äººå ç”¨ï¼šä¿å­˜æ—¶ç°è¯»æ’æœŸå¹¶æ‹’ç»ï¼Œè€Œä¸æ˜¯ç”¨è¿‡æœŸçš„æŸ¥è¯¢ç»“æœã€‚ ... ok
 test_alternatives_exclude_slots_proposed_to_other_material (test_tools.ReadToolsTest.test_alternatives_exclude_slots_proposed_to_other_material) ... ok
 test_cannot_propose_occupied_slot (test_tools.ReadToolsTest.test_cannot_propose_occupied_slot) ... ok
 test_duration_over_limit_is_warn (test_tools.ReadToolsTest.test_duration_over_limit_is_warn) ... ok
@@ -85,6 +89,6 @@ test_reschedule_requires_confirmation (test_tools.SaveDraftReviewTest.test_resch
 test_risky_material_cannot_be_scheduled_directly (test_tools.SaveDraftReviewTest.test_risky_material_cannot_be_scheduled_directly) ... ok
 
 ----------------------------------------------------------------------
-Ran 76 tests in 0.276s
+Ran 78 tests in 0.218s
 
 OK

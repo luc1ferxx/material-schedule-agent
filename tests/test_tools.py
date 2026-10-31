@@ -24,11 +24,12 @@ class ReadToolsTest(TempDirMixin, unittest.TestCase):
         self.assertTrue(any("publish_time" in m for m in data["request_missing"]))
 
     def test_rule_levels(self):
-        ctx, ex = self.make_ctx([item("M01"), item("M04"), item("M05")])
+        ctx, ex = self.make_ctx([item("M01"), item("M04"), item("M05"), item("M09")])
         level = lambda mid: ex.execute("check_rules", {"material_id": mid, "reason": "r"}).data["highest_level"]
         self.assertEqual(level("M01"), "none")
         self.assertEqual(level("M04"), "warn")
         self.assertEqual(level("M05"), "verify")
+        self.assertEqual(level("M09"), "block")
 
     def test_duration_over_limit_is_warn(self):
         ctx, ex = self.make_ctx([item("M02")])
